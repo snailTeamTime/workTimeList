@@ -1,0 +1,513 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>报告结果</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon64x64.ico" type="image/x-icon">
+    <!--<link rel="shortcut icon" type="image/x-ico" href="images/favicon.ico">-->
+    <!--<link rel="shortcut icon" type="image/x-ico" href="images/favicon_1.ico">-->
+    <link rel="stylesheet" href="../../common/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/reportResultMove.css">
+</head>
+<body>
+<div class="allSection">
+    <div class="publicHead">报告结果</div>
+    <div id="reportResult">
+        <div class="content">
+            <div class="section" style="padding-top: 0px;">
+
+                <div class="reportSection">
+                    <div class="reportTitle">
+                        <i class="icon1"></i><span>基本情况</span>
+                    </div>
+                    <div class="verticalTable2" id="studentBasicInfo">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th colspan="2" width="100">学生信息</th>
+                            </tr>
+
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td width="200">学生姓名</td>
+                                <td width="400" id="usertruename" name="usertruename">赵天鸣</td>
+                            </tr>
+                            <tr>
+                                <td>性别</td>
+                                <td id="sex">女</td>
+                            </tr>
+                            <tr>
+                                <td>学校名称</td>
+                                <td id="schoolname" name="schoolname">北京市门头沟区潭柘寺中心小学</td>
+                            </tr>
+                            <tr>
+                                <td>年级与班级</td>
+                                <td id="classInfo">六年级（1）班</td>
+                            </tr>
+                            <tr>
+                                <td>小组名称</td>
+                                <td data-recordtype="小学" class="duties">第（1）组</td>
+                            </tr>
+                            <tr>
+                                <td>担任职务</td>
+                                <td data-recordtype="小学" class="duties">班长</td>
+                            </tr>
+
+                            <tr>
+                                <td>学籍号</td>
+                                <td id="XJH">G13082519890928161X</td>
+                            </tr>
+                            <tr>
+                                <td>手机号</td>
+                                <td id="phone">18911317897</td>
+                            </tr>
+                            <tr>
+                                <td>家长姓名</td>
+                                <td id="paruserName">赵力宏</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!--选项卡  start-->
+                <div class="reportSection">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation " class="active"><a href="#dayReportResult" aria-controls="home"
+                                                                   role="tab" data-toggle="tab">日报告</a></li>
+                        <!--<li role="presentation"><a href="#monthReportResult" aria-controls="messages" role="tab" data-toggle="tab">月报告</a></li>-->
+                        <li role="presentation"><a href="#monthReportResult" aria-controls="messages" role="tab"
+                                                   data-toggle="tab" id="monthBtn">月报告</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <!--日报告 start-->
+                        <div role="tabpanel" class="tab-pane active" id="dayReportResult">
+                            <div class="reportSection">
+                                <div class="row">
+                                    <div class="col-xs-8 col-sm-8 col-md-5 col-md-offset-4" style="padding-right: 0px">
+                                        <input type="date" class="form-control" placeholder="请选择日期" id="getDayDate">
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-3">
+                                        <button class="btn bg-primary btn-block" id="getDayReportBtn">生成报告</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="reportSection">
+                                <div class="reportTitle">
+                                    <i class="icon1"></i><span>日教学教务评分</span>
+                                </div>
+                                <div>
+                                    <div class="reportCanvas1" id="reportCanvas1">
+
+
+                                    </div>
+                                </div>
+                                <div class="verticalTable3" id="teachingAffairsGR">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th colspan="10" width="750">2018年1月20日评测结果</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>项<br>目</td>
+                                            <td>到<br>校</td>
+                                            <td>领<br>巾</td>
+                                            <td>课<br>间</td>
+                                            <td>个<br>人</td>
+                                            <td>按<br>时</td>
+                                            <td>值<br>日</td>
+                                            <td>作<br>业</td>
+                                            <td>听<br>写</td>
+                                        </tr>
+                                        <tr>
+                                            <td>得分</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>平均分</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                        </tr>
+                                        <tr>
+                                            <td>总分</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                            <td>10</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="reportSection">
+                                <div class="reportTitle">
+                                    <i class="icon1"></i><span>日课堂动态</span>
+                                </div>
+                                <div>
+                                    <div class="reportCanvas1" id="reportCanvas2">
+
+
+                                    </div>
+                                </div>
+                                <div class="verticalTable3" id="classRoomDynamicsDay">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th colspan="9" width="750">2018年1月20日课堂动态<span style='font-size: 13px'>&nbsp;(单位:次)</span>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>学科</th>
+                                            <th>举手</th>
+                                            <th>发言</th>
+                                            <th>合作</th>
+                                            <th>警告</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>语文</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>数学</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>英语</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>思想品德</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>科学</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+
+                                <div class="verticalTable3" id="selectGeHaoDay">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th colspan="10" width="750">2018年1月3日&nbsp;个性发展评价<span
+                                                    class="text-primary">&nbsp;加分项</span></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>项目</td>
+                                            <td>学习</td>
+                                            <td>实践</td>
+                                            <td>体育</td>
+                                            <td>读书</td>
+                                            <td>孝亲</td>
+                                        </tr>
+                                        <tr>
+                                            <td>得分</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                        <!--日报告 end-->
+
+                        <!--月报告 start-->
+                        <div role="tabpanel" class="tab-pane" id="monthReportResult">
+                            <div class="reportSection">
+                                <div class="row">
+                                    <div class="col-xs-8 col-sm-8 col-md-5 col-md-offset-4 " style="padding-right: 0px">
+                                        <input type="month" class="form-control" placeholder="请选择年月" id="getMonthDate">
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-3">
+                                        <button class="btn bg-primary btn-block" id="getMonthReportBtn">生成报告</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="reportSection">
+                                <div class="reportTitle">
+                                    <i class="icon1"></i><span>月教学教务评分</span>
+                                </div>
+                                <div>
+                                    <div class="reportCanvas1" id="monthReportResultCanvas1">
+
+
+                                    </div>
+                                </div>
+                                <div class="verticalTable3" id="monthReportResultTeachingAffairs">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th colspan="10" width="750">2018年1月20日评测结果</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>项<br>目</td>
+                                            <td>到<br>校</td>
+                                            <td>领<br>巾</td>
+                                            <td>课<br>间</td>
+                                            <td>个<br>人</td>
+                                            <td>按<br>时</td>
+                                            <td>值<br>日</td>
+                                            <td>作<br>业</td>
+                                            <td>听<br>写</td>
+                                        </tr>
+                                        <tr>
+                                            <td>得分</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>7</td>
+                                            <td>7</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>平均分</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>7</td>
+                                            <td>7</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>总分</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>7</td>
+                                            <td>7</td>
+                                            <td>7</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                            <div class="reportSection">
+                                <div class="reportTitle">
+                                    <i class="icon1"></i><span>月课堂动态</span>
+                                </div>
+                                <div>
+                                    <div class="reportCanvas1" id="monthReportResultCanvas2">
+
+
+                                    </div>
+                                </div>
+                                <div class="verticalTable3" id="monthClassRoomDynamicsDay">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th colspan="9" width="750">2018年1月20日课堂动态<span style='font-size: 13px'>&nbsp;(单位:次)</span>
+                                            </th>
+                                        </tr>
+                                        <tr>
+                                            <th>学科</th>
+                                            <th>举手</th>
+                                            <th>发言</th>
+                                            <th>合作</th>
+                                            <th>警告</th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>语文</td>
+                                            <td>1</td>
+                                            <td>2</td>
+                                            <td>3</td>
+                                            <td>4</td>
+                                        </tr>
+
+                                        <tr>
+                                            <td>数学</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>英语</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>思想品德</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                        </tr>
+                                        <tr>
+                                            <td>科学</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <div class="verticalTable3" id="selectGeHaoMonth">
+                                    <table>
+                                        <thead>
+                                        <tr>
+                                            <th colspan="10" width="750">2018年1月3日&nbsp;个性发展评价<span
+                                                    class="text-primary">&nbsp;加分项</span></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>项目</td>
+                                            <td>学习</td>
+                                            <td>实践</td>
+                                            <td>体育</td>
+                                            <td>读书</td>
+                                            <td>孝亲</td>
+                                        </tr>
+                                        <tr>
+                                            <td>得分</td>
+                                            <td>6</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                            <td>6</td>
+                                            <td>7</td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                            </div>
+
+
+                        </div>
+                        <!--月报告 end-->
+
+                    </div>
+
+                </div>
+                <!--选项卡  end-->
+
+
+                <div class="reportSection">
+                    <div class="reportTitle">
+                        <i class="icon1"></i><span>教师评语</span>
+                    </div>
+                    <div id="Holland_reportContent">
+                        <div class="reportTable2 ">
+                            <table>
+                                <tbody>
+                                <tr>
+                                    <td width="800">
+                                        <p class="reportSubtitle2">测试结果匹配的职业为：</p>
+                                        <div class="textIndent" id="Holland_proposal"><p><span style="color:#009cff; ">SRC：</span><br>  护理员、护理助理、医院勤杂工、理发师、学校儿童服务人员。
+                                        </p>
+                                            <p><span style="color:#009cff; ">CSR：</span><br>  运货代理商、铁路职员、交通检查员、办公室通信员、薄记员、出纳员、银行财务职员。
+                                            </p>
+                                            <p><span style="color:#009cff; ">CRS：</span><br>  仓库保管员、档案管理员、缝纫工、讲述员、收款人。
+                                            </p>
+                                            <p><span style="color:#009cff; ">RCS：</span><br>  公共汽车驾驶员、一等水手、游泳池服务员、裁缝、建筑工作、石匠、烟囱修建工、混凝土工、电话修理工、爆炸手、邮递员、矿工、裱糊工人、纺纱工。
+                                            </p>
+                                            <p><span style="color:#009cff; ">RSC、SCR：</span><br>  霍兰德认为，有一些职业指向标识是互相矛盾的，这些代码所表明的职业趣向是不明确的，故不能给出职业建议。<br>  霍兰德认为，相邻关系：RI
+                                                IR IA AI AS SA SE ES EC CE RC CR，两种类型的个体间共同点较多。 职业契合点也非常多。<br>  相隔关系：RA
+                                                RE IC IS AR AE SI SC EA ER CI CS相隔关系两种类型个体之间共同点比相邻关系较少。职业契合度较低。<br>  相对关系：RS
+                                                IE AC SR EI CA，相对关系人格类型共同点少，一个人同时对处于相对关系的两种职业环境都兴趣很浓的情况较为少见，甚至是不可能。<br>  例如：ACR中的AC属于相对关系，较为少见，相对应的职业也很少。所以ACR、CAE都没有。
+                                            </p></div>
+                                        <!--<p class="textIndent" id="Holland_proposal"></p>-->
+                                    </td>
+                                </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+                <div class="row " style="margin-top: 15px;margin-left: 0px;margin-right: 0px;">
+                    <div class="col-sm-6 col-xs-6 col-sm-offset-3 col-xs-offset-3 ">
+                        <a href="#reportResult">
+                            <button class="btn btn-block btn-default">返回顶部</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../common/js/common.js"></script>
+
+<script src="../../common/js/echarts.min.js"></script>
+
+<script src="../js/reportResultMove.js"></script>
+
+</body>
+</html>

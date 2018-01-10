@@ -1,0 +1,380 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>班级报告</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="../images/favicon64x64.ico" type="image/x-icon">
+    <!--<link rel="shortcut icon" type="image/x-ico" href="images/favicon.ico">-->
+    <!--<link rel="shortcut icon" type="image/x-ico" href="images/favicon_1.ico">-->
+    <link rel="stylesheet" href="../../common/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/reportResultMove.css">
+    <link rel="stylesheet" href="../../common/layer_mobile/need/layer.css">
+</head>
+<body>
+<div class="allSection">
+    <div class="publicHead">班级报告</div>
+    <div id="reportResult">
+        <div class="content">
+            <div class="section" style="padding-top: 0px;">
+
+                <div class="reportSection">
+                    <div class="reportTitle">
+                        <i class="icon1"></i><span>学校基本信息</span>
+                    </div>
+                    <div class="verticalTable2" id="studentBasicInfo">
+                        <table>
+                            <thead>
+                            <tr>
+                                <th colspan="2" width="100">学校信息</th>
+                            </tr>
+
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td width="200">学校名称</td>
+                                <td width="400" id="usertruename" name="usertruename">
+                                    潭柘寺中心小学
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>教师数量</td>
+                                <td id="teacherNum">56人</td>
+                            </tr>
+                            <tr>
+                                <td>学生数量</td>
+                                <td id="studentNum">300人</td>
+                            </tr>
+                            <tr>
+                                <td>选择年级</td>
+                                <td>
+                                    <select name="gradeName" id="gradeName" class="form-control">
+                                        <option value="volvo">一年级</option>
+                                        <option value="saab">二年级</option>
+                                        <option value="opel">三年级</option>
+                                        <option value="audi">四年级</option>
+                                        <option value="audi">五年级</option>
+                                        <option value="audi">六年级</option>
+                                    </select>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>选择班级</td>
+                                <td>
+                                    <select name="className" id="className" class="form-control">
+                                        <option value="audi">1班</option>
+                                        <option value="audi">2班</option>
+                                        <option value="audi">3班</option>
+                                        <option value="audi">4班</option>
+                                        <option value="audi">5班</option>
+                                        <option value="audi">6班</option>
+                                        <option value="audi">7班</option>
+                                    </select>
+                                </td>
+                            </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                <!--选项卡  start-->
+                <div class="reportSection">
+                    <!-- Nav tabs -->
+                    <ul class="nav nav-tabs" role="tablist">
+                        <li role="presentation " class="active">
+                            <a href="#dayReportResult" aria-controls="home" role="tab" data-toggle="tab"
+                               id="dayBtn">日报告</a></li>
+                        <!--<li role="presentation"><a href="#monthReportResult" aria-controls="messages" role="tab" data-toggle="tab">月报告</a></li>-->
+                        <li role="presentation">
+                            <a href="#monthReportResult" aria-controls="messages" role="tab" data-toggle="tab"
+                               id="monthBtn">月报告</a></li>
+                    </ul>
+
+                    <!-- Tab panes -->
+                    <div class="tab-content">
+                        <!--日报告 start-->
+                        <div role="tabpanel" class="tab-pane active" id="dayReportResult">
+                            <div class="reportSection">
+                                <div class="row">
+                                    <div class="col-xs-8 col-sm-8 col-md-5 col-md-offset-4" style="padding-right: 0px">
+
+                                        <input type="date" class="form-control" placeholder="请选择日期" id="getDayDate">
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-3">
+                                        <button class="btn bg-primary btn-block" id="getDayReportBtn">生成报告</button>
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="reportSection">
+                                <div class="reportTitle">
+                                    <i class="icon1"></i><span>班级日活跃</span>
+                                </div>
+                                <div>
+                                    <div class="reportCanvas1" id="evaluationScore" style="height: 23rem;">
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="reportSection">
+                                <div class="reportTitle">
+                                    <i class="icon1"></i><span>班级日活跃科目</span>
+                                </div>
+                                <div>
+                                    <div class="reportCanvas1" id="optionCloud">
+
+
+                                    </div>
+                                    <div class="verticalTable3" id="monthClassRoomDynamicsDay">
+                                        <table>
+                                            <thead>
+                                            <tr>
+                                                <th colspan="9" width="750"><span
+                                                        id="getDayTitle"></span>&nbsp;课堂动态<span
+                                                        style="font-size: 13px">&nbsp;(单位:次)</span></th>
+                                            </tr>
+                                            <tr>
+                                                <th>学科</th>
+                                                <th>举手</th>
+                                                <th>发言</th>
+                                                <th>合作</th>
+                                                <th>活跃总和</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="dayActiveSubjects">
+                                            <tr>
+                                                <td>语文</td>
+                                                <td>87</td>
+                                                <td>59</td>
+                                                <td>13</td>
+                                                <td>159</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="reportSection">
+                                <div class="reportTitle">
+                                    <i class="icon1"></i><span>班级之星</span>
+                                </div>
+
+                                <div class="activeInfo">
+                                    <div class="goodActiveInfo">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-xs-12 ">
+                                                <div class="row" id="goodActiveRankingBox">
+                                                    <div class="col-sm-4 col-xs-4 goodActiveRanking">
+                                                        <img src="../images/sex1.png" class="goodActiveImg">
+                                                        <div class="goodActiveIcon">
+                                                            <img src="../images/ranking2.png">
+                                                        </div>
+                                                        <div>李梓鑫</div>
+                                                        <div>97分</div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-xs-4 goodActiveRanking oneRanking">
+                                                        <img src="../images/sex2.png" class="goodActiveImg">
+                                                        <div class="goodActiveIcon">
+                                                            <img src="../images/ranking1.png">
+                                                        </div>
+                                                        <div>李昱颖</div>
+                                                        <div>100分</div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-xs-4 goodActiveRanking">
+                                                        <img src="../images/sex2.png" class="goodActiveImg">
+                                                        <div class="goodActiveIcon">
+                                                            <img src="../images/ranking3.png">
+                                                        </div>
+                                                        <div>赵新泽</div>
+                                                        <div>95分</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--日报告 end-->
+
+                        <!--月报告 start-->
+                        <div role="tabpanel" class="tab-pane" id="monthReportResult">
+                            <div class="reportSection">
+                                <div class="row">
+                                    <div class="col-xs-8 col-sm-8 col-md-5 col-md-offset-4 " style="padding-right: 0px">
+                                        <input type="month" class="form-control" placeholder="请选择年月" id="getMonthDate">
+                                    </div>
+                                    <div class="col-xs-4 col-sm-4 col-md-3">
+                                        <button class="btn bg-primary btn-block" id="getMonthReportBtn">生成报告</button>
+                                    </div>
+                                </div>
+
+                            </div>
+
+                            <div class="reportSection">
+                                <div class="reportTitle">
+                                    <i class="icon1"></i><span>班级月活跃</span>
+                                </div>
+                                <div>
+                                    <div class="reportCanvas1" id="evaluationScoreMonth" style="height: 23rem;">
+
+
+                                    </div>
+                                </div>
+
+                            </div>
+                            <div class="reportSection">
+                                <div class="reportTitle">
+                                    <i class="icon1"></i><span>班级月活跃科目</span>
+                                </div>
+                                <div>
+                                    <div class="reportCanvas1" id="optionCloudMonth">
+
+
+                                    </div>
+                                    <div class="verticalTable3">
+                                        <table>
+                                            <thead>
+                                            <tr>
+                                                <th colspan="9" width="750"><span
+                                                        id="timeMonthTitle"></span>&nbsp;课堂动态<span
+                                                        style="font-size: 13px">&nbsp;(单位:次)</span></th>
+                                            </tr>
+                                            <tr>
+                                                <th>学科</th>
+                                                <th>举手</th>
+                                                <th>发言</th>
+                                                <th>合作</th>
+                                                <th>活跃总和</th>
+                                            </tr>
+                                            </thead>
+                                            <tbody id="monthActiveSubjects">
+                                            <tr>
+                                                <td>语文</td>
+                                                <td>87</td>
+                                                <td>59</td>
+                                                <td>13</td>
+                                                <td>159</td>
+                                            </tr>
+                                            <tr>
+                                                <td>数学</td>
+                                                <td>75</td>
+                                                <td>46</td>
+                                                <td>24</td>
+                                                <td>145</td>
+                                            </tr>
+                                            <tr>
+                                                <td>英语</td>
+                                                <td>60</td>
+                                                <td>27</td>
+                                                <td>12</td>
+                                                <td>99</td>
+                                            </tr>
+                                            <tr>
+                                                <td>思想品德</td>
+                                                <td>43</td>
+                                                <td>24</td>
+                                                <td>14</td>
+                                                <td>81</td>
+                                            </tr>
+                                            <tr>
+                                                <td>科学</td>
+                                                <td>34</td>
+                                                <td>17</td>
+                                                <td>13</td>
+                                                <td>65</td>
+                                            </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                            <div class="reportSection">
+                                <div class="reportTitle">
+                                    <i class="icon1"></i><span>班级之星</span>
+                                </div>
+
+                                <div class="activeInfo">
+                                    <div class="goodActiveInfo">
+                                        <div class="row">
+                                            <div class="col-sm-12 col-xs-12 ">
+                                                <div class="row" id="goodMonthActiveRankingBox">
+                                                    <div class="col-sm-4 col-xs-4 goodActiveRanking"><img
+                                                            src="../images/sex1.png" class="goodActiveImg">
+                                                        <div class="goodActiveIcon"><img
+                                                                src="../images/ranking2.png"></div>
+                                                        <div>李梓鑫</div>
+                                                        <div>96分</div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-xs-4 goodActiveRanking oneRanking"><img
+                                                            src="../images/sex2.png" class="goodActiveImg">
+                                                        <div class="goodActiveIcon"><img
+                                                                src="../images/ranking1.png"></div>
+                                                        <div>李昱颖</div>
+                                                        <div>100分</div>
+                                                    </div>
+                                                    <div class="col-sm-4 col-xs-4 goodActiveRanking"><img
+                                                            src="../images/sex2.png" class="goodActiveImg">
+                                                        <div class="goodActiveIcon"><img
+                                                                src="../images/ranking3.png"></div>
+                                                        <div>赵新泽</div>
+                                                        <div>93分</div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--月报告 end-->
+                    </div>
+                </div>
+                <!--选项卡  end-->
+
+
+                <div class="row " style="margin-top: 15px;margin-left: 0px;margin-right: 0px;">
+                    <div class="col-sm-6 col-xs-6 col-sm-offset-3 col-xs-offset-3 ">
+                        <a href="#reportResult">
+                            <button class="btn btn-block btn-default">返回顶部</button>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<!--用户信息错误请重新登陆 start-->
+
+<!--用户信息错误请重新登陆 end-->
+
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../common/layer_mobile/layer.js"></script>
+
+<script src="../../common/js/common.js"></script>
+
+<script src="../../common/js/echarts.min.js"></script>
+<script src="../../common/js/echarts-wordcloud.min.js"></script>
+
+
+<script src="../js/classReportResultMove.js"></script>
+
+</body>
+</html>
