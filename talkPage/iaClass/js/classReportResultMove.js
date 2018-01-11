@@ -1,35 +1,112 @@
+var comprehensiveScore = 98;
+var myActivityChart = echarts.init(document.getElementById('evaluationScore'));
 
+var pieOption = {
+    legend: {
+        show: false,
+        orient: 'vertical',
+        x: 'left',
+        data: ['综合得分', '与总分相差']
+    },
+    series: [{
+        name: '综合得分情况',
+        type: 'pie',
+        radius: ['80%', '90%'],
+        clockwise: true,
+        label: {
+            normal: {
+                show: false,
+                position: 'center'
+            }
+        },
+        data: [
+            {
+                value: comprehensiveScore,
+                name: '{a|' + comprehensiveScore + '\n}{c|已超越' + comprehensiveScore + '%班级}',
+                itemStyle: {
+                    normal: {
+                        color: '#40D8C1'
+                    }
+                },
+                label: {
+                    normal: {
+                        show: true,
+                        rich: {
+                            a: {
+                                color: '#666666',
+                                fontSize: 60,
+                                fontWeight: 'bold',
+                                lineHeight: 100,
+                                width: 80,
+                                align: 'center'
+                            },
+                            c: {
+                                color: '#666666',
+                                fontSize: 15,
+                                borderRadius: 30,
+                                width: 120,
+                                align: 'center',
+                                padding: [6, 4]
+                            }
+                        }
+                    }
+                }
+            },
+            {
+                value: (100 - comprehensiveScore),
+                name: '',
+                itemStyle: {
+                    normal: {
+                        color: '#40D8C1',
+                        opacity: 0.2
+                    }
+                }
+            }
+        ]
+    }]
+};
+myActivityChart.setOption(pieOption);
+//综合分数环形图 end
 
+var activeSubjectsArr=[
+    {name: "英语", value: 28}
+, {name: "美术", value: 14}
+, {name: "科学", value: 7}
+, {name: "地理", value: 5}
+, {name: "思想品德", value: 3}
+, {name: "数学", value: 1}
+, {name: "音乐", value: 1}
+    ];
+var myActiveSubjectsChart = echarts.init(document.getElementById('optionCloud'));
+var optionCloud = {
+    title: {},
+    tooltip: {},
+    series: [{
+        type: 'wordCloud',
+        gridSize: 20,
+        sizeRange: [20, 70],
+        rotationRange: [0, 0],
+        shape: 'circle',
+        textStyle: {
+            normal: {
+                color: function () {
+                    return 'rgb(' + [
+                        Math.round(Math.random() * 160),
+                        Math.round(Math.random() * 160),
+                        Math.round(Math.random() * 160)
+                    ].join(',') + ')';
+                }
+            },
+            emphasis: {
+                shadowBlur: 10,
+                shadowColor: '#333'
+            }
+        },
+        data: activeSubjectsArr
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    }]
+};
+myActiveSubjectsChart.setOption(optionCloud);
 
 
 
