@@ -1,7 +1,5 @@
 
 // 雷达图 start
-
-
 var myChartRadarBox = echarts.init(document.getElementById('reportCanvas1'));
 var option = {
     title: {
@@ -62,6 +60,13 @@ var option = {
     }]
 };
 myChartRadarBox.setOption(option);
+
+
+
+
+
+
+
 
 // //教学教务雷达图 end
 
