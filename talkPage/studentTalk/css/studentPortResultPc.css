@@ -1,6 +1,6 @@
 @charset "UTF-8";
 html,body{height: 100%;width: 100%;}
-.text-indent{text-indent:2em;}
+.text-indent{text-indent:2em;line-height: 1.7;}
 
 /*背景色 start*/
 /*灰色*/
@@ -11,16 +11,7 @@ html,body{height: 100%;width: 100%;}
 /*背景色 end*/
 
 /*报告结果图标题头 start*/
-.portlet>.portlet-title>.caption>.caption-helper {
-    padding: 0;
-    margin: 0;
-    line-height: 13px;
-    color: #9eacb4;
-    font-size: 16px;
-    font-weight: 400;
-    display: block;
-    margin-top: 10px;
-}
+.portlet>.portlet-title>.caption>.caption-helper {padding: 0;margin: 0;line-height: 13px;color: #9eacb4;font-size: 16px;font-weight: 400;display: block;margin-top: 10px;}
 /*报告结果图标题头 end*/
 
 
