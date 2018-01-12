@@ -1,0 +1,344 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>班级报告</title>
+    <meta name="renderer" content="webkit">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <!--<link rel="shortcut icon" href="../images/favicon.ico" type="image/x-icon">-->
+    <!--<link rel="shortcut icon" href="../images/favicon64x64.ico" type="image/x-icon">-->
+    <link rel="stylesheet" href="../../common/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <!--引入公共样式-->
+    <link rel="stylesheet" href="../../common/css/components.css">
+    <!--引入字体图标库-->
+    <link rel="stylesheet" href="../../common/simple-line-icons/simple-line-icons.css">
+
+    <link rel="stylesheet" href="../css/studentPortResultPc.css">
+    <link rel="stylesheet" href="../../common/layer_mobile/need/layer.css">
+</head>
+<body class="bg-gray">
+<div class="allSection ">
+    <div class="publicHead">2017年潭柘寺中心小学，学生体质健康监测报告</div>
+    <div class="content">
+        <div class="section" style="padding-top: 0px;">
+            <div class="reportSection">
+                <div class="reportTitle">
+                    <i class="icon1"></i><span>基本背景</span>
+                </div>
+                <div class="verticalTable2 bg-white">
+                    <table>
+                        <thead>
+                        <tr>
+                            <th colspan="8" width="100">基本信息</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td width="200">地区</td>
+                            <td width="400">北京市海淀区</td>
+
+                            <td width="200">学校名称</td>
+                            <td width="400">潭柘寺中心小学</td>
+
+                        </tr>
+                        <tr>
+                            <td width="200">学生人数</td>
+                            <td width="400">560人</td>
+
+                            <td width="200">日期</td>
+                            <td width="400">2018年01月11日</td>
+                        </tr>
+                        </tbody>
+
+                        <thead>
+                        <tr>
+                            <th colspan="8" width="100">背景介绍</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td colspan="8">
+                                <div class="text-indent">
+                                    为进一笔贯彻落实中共中央国务院《关于加强青少年体育增强青少年体质的意见》（中发
+                                    [2007]7号）、市委市政府《关于加强青少年体育增强青少年体质的实施意见》（京发[2008]6号）第四条“建立和完善学生体质健康评估机制”精神，根据市教委年度工作计划要求，结合门头沟区工作实际，于2017年10月16日—26日展开中小学生全员国家学生体质健康标准测试，建立区学生健康管理数据平台，从学生身体形态、身体机能、身体素质以及体质健康综合评价等方面对学生体质健康状况进行评估。全面评估各校学生健康情况，提高全区师生健康意识，提升学生体质健康水平。
+                                </div>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+
+            <div class="reportSection">
+                <div class="reportTitle">
+                    <i class="icon1"></i><span>总体结果</span>
+                </div>
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">分数排名</span>
+                                    <span class="caption-helper">weekly stats...</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div>
+                                    <!--学生总排名统计区里的排名-->
+                                    <div class="chart" id="evaluationScore" style="height: 23rem;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END PORTLET-->
+                    </div>
+                    <div class="col-md-8 col-sm-8">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">学校体质健康直接测量</span>
+                                    <span class="caption-helper">weekly stats...</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <div>
+                                    <!--学生总排名统计区里的排名-->
+                                    <div class="chart" id="" style="height: 23rem;"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- END PORTLET-->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-4 col-sm-4">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">低年级（1-2年级）</span>
+                                    <span class="caption-helper">weekly stats...</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <!--学校总排名统计图-->
+                                <div id="reportCanvas1" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PORTLET-->
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">中年级（3-4年级）</span>
+                                    <span class="caption-helper">weekly stats...</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <!--学校总排名统计图-->
+                                <div id="reportCanvas2" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PORTLET-->
+                    </div>
+                    <div class="col-md-4 col-sm-4">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">高年级（5-6年级）</span>
+                                    <span class="caption-helper">weekly stats...</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <!--学校总排名统计图-->
+                                <div id="reportCanvas3" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PORTLET-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="reportSection">
+                <div class="reportTitle">
+                    <i class="icon1"></i><span>分项结果</span>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">体质</span>
+                                    <span class="caption-helper">weekly stats...</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <!--体质桑基图-->
+                                <div id="myChartSangJiTu" style="height: 500px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PORTLET-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">爆发力</span>
+                                    <span class="caption-helper">weekly stats...</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <!--爆发力环形图-->
+                                <div id="myChartBaoFaLi" style="height: 300px;"></div>
+
+                            </div>
+                        </div>
+                        <!-- END PORTLET-->
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">力量</span>
+                                    <span class="caption-helper">weekly stats...</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <!--力量柱状图-->
+                                <div id="myChartLiLang" style="height: 300px;"></div>
+
+                            </div>
+                        </div>
+                        <!-- END PORTLET-->
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 col-sm-6">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">柔韧</span>
+                                    <span class="caption-helper">weekly stats...</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <!--柔韧柱状图-->
+                                <div id="myChartRouRen" style="height: 300px;"></div>
+
+                            </div>
+                        </div>
+                        <!-- END PORTLET-->
+                    </div>
+                    <div class="col-md-6 col-sm-6">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">耐力</span>
+                                    <span class="caption-helper">weekly stats...</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <!--耐力柱状图-->
+                                <div id="myChartNaiLi" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PORTLET-->
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">速度</span>
+                                    <span class="caption-helper">weekly stats...</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <!--速度-->
+                                <div id="myChartSuDu" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PORTLET-->
+                    </div>
+                </div>
+            </div>
+
+            <div class="reportSection">
+                <div class="reportTitle">
+                    <i class="icon1"></i><span>建议结论</span>
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-md-12">
+                        <!-- BEGIN PORTLET-->
+                        <div class="portlet light bordered">
+                            <div class="portlet-title">
+                                <div class="caption">
+                                    <i class="icon-bar-chart font-green"></i>
+                                    <span class="caption-subject font-green bold uppercase">结论</span>
+                                    <span class="caption-helper">weekly stats...</span>
+                                </div>
+                            </div>
+                            <div class="portlet-body">
+                                <!--学校总排名统计图-->
+                                <div id="" style="height: 300px;"></div>
+                            </div>
+                        </div>
+                        <!-- END PORTLET-->
+                    </div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--用户信息错误请重新登陆 start-->
+
+<!--用户信息错误请重新登陆 end-->
+
+<script src="../../common/js/jquery.min.js"></script>
+<script src="../../common/bootstrap-3.3.7-dist/js/bootstrap.js"></script>
+<script src="../../common/layer_mobile/layer.js"></script>
+
+<script src="../../common/js/common.js"></script>
+
+<script src="../../common/js/echarts.min.js"></script>
+<script src="../../common/js/echarts-wordcloud.min.js"></script>
+
+<script src="../js/studentPortResultPc.js"></script>
+
+
+</body>
+</html>
