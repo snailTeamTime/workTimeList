@@ -1,6 +1,7 @@
 var comprehensiveScore = 98;
 var comprehensiveScoreName =5;
 var myActivityChart = echarts.init(document.getElementById('evaluationScore'));
+var themeOption='macarons';
 
 var pieOption = {
     legend: {
@@ -613,7 +614,7 @@ myChartSangJiTu.setOption(option);
 //BMI统计图 end
 
 //爆发力 start
-var myChartBaoFaLi = echarts.init(document.getElementById('myChartBaoFaLi'));
+var myChartBaoFaLi = echarts.init(document.getElementById('myChartBaoFaLi'),themeOption);
 option = {
     angleAxis: {
         type: 'category',
@@ -934,7 +935,7 @@ var option = {
                 normal: {
                     show: true,
                     length: 5,
-                    length2:10
+                    length2:15
                 }
             },
             data:[
