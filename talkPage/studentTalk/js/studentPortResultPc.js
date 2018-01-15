@@ -42,7 +42,7 @@ var pieOption = {
                             },
                             c: {
                                 color: '#666666',
-                                fontSize: 15,
+                                fontSize: 12,
                                 borderRadius: 30,
                                 width: 120,
                                 align: 'center',
@@ -73,11 +73,12 @@ myActivityChart.setOption(pieOption);
 var myChartRadarBox = echarts.init(document.getElementById('reportCanvas1'));
 var option = {
     title: {
-        text: ''
+        text: '',//'体质健康总体情况',
+        color: '#2EC7C9'
     },
     tooltip: {},
     legend: {
-        data: []
+        data: [{name: '区平均值', icon: 'roundRect'}, {name: '校平均值', icon: 'roundRect'}]
     },
     radar: {
         // shape: 'circle',
@@ -91,22 +92,21 @@ var option = {
             }
         },
         indicator: [
-            {name: '到校', max: 10},
-            {name: '红领巾', max: 10},
-            {name: '课间纪律', max: 10},
-            {name: '个人卫生', max: 10},
-            {name: '按时完成', max: 10},
-            {name: '值日', max: 10},
-            {name: '作业', max: 10},
-            {name: '听写', max: 10},
+            {name: 'BMI', max: 100},
+            {name: '肺活量', max: 100},
+            {name: '速度', max: 100},
+            {name: '柔韧', max: 100},
+            {name: '爆发力', max: 100}
+
+
         ]
     },
     series: [{
-        name: '预算 vs 开销（Budget vs spending）',
+        name: '校平均值',
         type: 'radar',
         itemStyle: {
             normal: {
-                color: '#2EC7C9'
+                color: '#2EC7C9',
             }
         },
         areaStyle: {
@@ -114,31 +114,54 @@ var option = {
                 opacity: 0.5
             }
         },
-
-
         // areaStyle: {normal: {}},
         data: [
             {
-                value: ["10", "10", "10", "10", "10", "10", "10", "10"],
-                name: '教学教务'
+                value: [89.73, 72.18, 68.94, 90.44, 78.03],
+                name: '校平均值',
+                label: {
+                    normal: {
+                        show: true
+                    }
+                }
             }
-            // {
-            //     value : [50000, 14000, 28000, 31000, 42000, 21000, 10000, 28000, 35000, 50000],
-            //     name : '实际开销（Actual Spending）'
-            // }
+
         ]
-    }]
+    },
+        {
+            name: '区平均值',
+            type: 'radar',
+            itemStyle: {
+                normal: {
+                    color: '#d58165',
+                }
+            },
+            /*areaStyle: {
+                normal: {
+                    opacity: 0.5
+                }
+            },*/
+            // areaStyle: {normal: {}},
+            data: [
+                {
+                    value: [90.57, 74.31, 74.31, 82.82, 79.13],
+                    name: '区平均值'
+                }
+
+            ]
+        },]
 };
 myChartRadarBox.setOption(option);
 
 var myChartRadarBox2 = echarts.init(document.getElementById('reportCanvas2'));
 var option = {
     title: {
-        text: ''
+        text: '',//'体质健康总体情况',
+        color: '#2EC7C9'
     },
     tooltip: {},
     legend: {
-        data: []
+        data: [{name: '区平均值', icon: 'roundRect'}, {name: '校平均值', icon: 'roundRect'}]
     },
     radar: {
         // shape: 'circle',
@@ -152,22 +175,22 @@ var option = {
             }
         },
         indicator: [
-            {name: '到校', max: 10},
-            {name: '红领巾', max: 10},
-            {name: '课间纪律', max: 10},
-            {name: '个人卫生', max: 10},
-            {name: '按时完成', max: 10},
-            {name: '值日', max: 10},
-            {name: '作业', max: 10},
-            {name: '听写', max: 10},
+            {name: 'BMI', max: 100},
+            {name: '肺活量', max: 100},
+            {name: '速度', max: 100},
+            {name: '柔韧', max: 100},
+            {name: '爆发力', max: 100},
+            {name: '力量', max: 100}
+
+
         ]
     },
     series: [{
-        name: '预算 vs 开销（Budget vs spending）',
+        name: '校平均值',
         type: 'radar',
         itemStyle: {
             normal: {
-                color: '#2EC7C9'
+                color: '#2EC7C9',
             }
         },
         areaStyle: {
@@ -175,31 +198,54 @@ var option = {
                 opacity: 0.5
             }
         },
-
-
         // areaStyle: {normal: {}},
         data: [
             {
-                value: ["10", "10", "10", "10", "10", "10", "10", "10"],
-                name: '教学教务'
-            },
-            // {
-            //     value : [50000, 14000, 28000, 31000, 42000, 21000, 10000, 28000, 35000, 50000],
-            //     name : '实际开销（Actual Spending）'
-            // }
+                value: [87.64, 78.46, 69.19, 87.90, 85.19, 81.03],
+                name: '校平均值',
+                label: {
+                    normal: {
+                        show: true
+                    }
+                }
+            }
+
         ]
-    }]
+    },
+        {
+            name: '区平均值',
+            type: 'radar',
+            itemStyle: {
+                normal: {
+                    color: '#d58165',
+                }
+            },
+            /*areaStyle: {
+                normal: {
+                    opacity: 0.5
+                }
+            },*/
+            // areaStyle: {normal: {}},
+            data: [
+                {
+                    value: [90.57, 74.31, 74.31, 82.82, 79.13, 74.65],
+                    name: '区平均值'
+                }
+
+            ]
+        },]
 };
 myChartRadarBox2.setOption(option);
 
 var myChartRadarBox3 = echarts.init(document.getElementById('reportCanvas3'));
 var option = {
     title: {
-        text: ''
+        text: '',//'体质健康总体情况',
+        color: '#2EC7C9'
     },
     tooltip: {},
     legend: {
-        data: []
+        data: [{name: '区平均值', icon: 'roundRect'}, {name: '校平均值', icon: 'roundRect'}]
     },
     radar: {
         // shape: 'circle',
@@ -213,22 +259,22 @@ var option = {
             }
         },
         indicator: [
-            {name: '到校', max: 10},
-            {name: '红领巾', max: 10},
-            {name: '课间纪律', max: 10},
-            {name: '个人卫生', max: 10},
-            {name: '按时完成', max: 10},
-            {name: '值日', max: 10},
-            {name: '作业', max: 10},
-            {name: '听写', max: 10},
+            {name: 'BMI', max: 100},
+            {name: '肺活量', max: 100},
+            {name: '速度', max: 100},
+            {name: '柔韧', max: 100},
+            {name: '爆发力', max: 100},
+            {name: '力量', max: 100},
+            {name: '耐力', max: 100}
+
         ]
     },
     series: [{
-        name: '预算 vs 开销（Budget vs spending）',
+        name: '校平均值',
         type: 'radar',
         itemStyle: {
             normal: {
-                color: '#2EC7C9'
+                color: '#2EC7C9',
             }
         },
         areaStyle: {
@@ -236,20 +282,42 @@ var option = {
                 opacity: 0.5
             }
         },
-
-
         // areaStyle: {normal: {}},
         data: [
             {
-                value: ["10", "10", "10", "10", "10", "10", "10", "10"],
-                name: '教学教务'
-            },
-            // {
-            //     value : [50000, 14000, 28000, 31000, 42000, 21000, 10000, 28000, 35000, 50000],
-            //     name : '实际开销（Actual Spending）'
-            // }
+                value: [88.06, 78.95, 68.11, 86.91, 86.10, 84.13, 75.46],
+                name: '校平均值',
+                label: {
+                    normal: {
+                        show: true
+                    }
+                }
+            }
+
         ]
-    }]
+    },
+        {
+            name: '区平均值',
+            type: 'radar',
+            itemStyle: {
+                normal: {
+                    color: '#d58165',
+                }
+            },
+            /*areaStyle: {
+                normal: {
+                    opacity: 0.5
+                }
+            },*/
+            // areaStyle: {normal: {}},
+            data: [
+                {
+                    value: [90.57, 74.31, 74.31, 82.82, 79.13, 74.65, 73.26],
+                    name: '区平均值'
+                }
+
+            ]
+        },]
 };
 myChartRadarBox3.setOption(option);
 //雷达图 end
@@ -538,159 +606,137 @@ myChartSangJiTu.setOption(option);
 
 //爆发力 start
 var myChartBaoFaLi = echarts.init(document.getElementById('myChartBaoFaLi'));
-var option = {
+option = {
     angleAxis: {
         type: 'category',
-        data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日'],
+        data: ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级'],
         z: 10
     },
     radiusAxis: {},
     polar: {},
     series: [{
         type: 'bar',
-        data: [1, 2, 3, 4, 3, 5, 1],
+        data: [0.0455, 0.0044, 0.0089, 0, 0, 0],
         coordinateSystem: 'polar',
-        name: 'A',
+        name: '不及格',
         stack: 'a'
     }, {
         type: 'bar',
-        data: [2, 4, 6, 1, 3, 2, 1],
+        data: [0.7238, 0.3739, 0.4159, 0.2890, 0.3102, 0.3254],
         coordinateSystem: 'polar',
-        name: 'B',
+        name: '及格',
         stack: 'a'
     }, {
         type: 'bar',
-        data: [1, 2, 3, 4, 1, 2, 5],
+        data: [0.1119, 0.2304, 0.2478, 0.2243, 0.2653, 0.201],
         coordinateSystem: 'polar',
-        name: 'C',
+        name: '良好',
+        stack: 'a'
+    }, {
+        type: 'bar',
+        data: [0.1188, 0.3913, 0.3274, 0.4867, 0.4245, 0.4736],
+        coordinateSystem: 'polar',
+        name: '优秀',
         stack: 'a'
     }],
     legend: {
         show: true,
-        data: ['A', 'B', 'C']
+        data: ['不及格', '及格', '良好', '优秀']
     }
 };
+
+
 myChartBaoFaLi.setOption(option);
 //爆发力 end
 
 //力量 start
 var myChartLiLang = echarts.init(document.getElementById('myChartLiLang'));
-var xAxisData = [];
-var data1 = [];
-var data2 = [];
-var data3 = [];
-var data4 = [];
-for (var i = 0; i < 10; i++) {
-    xAxisData.push('Class' + i);
-    data1.push((Math.random() * 2).toFixed(2));
-    data2.push(-Math.random().toFixed(2));
-    data3.push((Math.random() * 5).toFixed(2));
-    data4.push((Math.random() + 0.3).toFixed(2));
-}
-var itemStyle = {
-    normal: {},
-    emphasis: {
-        barBorderWidth: 1,
-        shadowBlur: 10,
-        shadowOffsetX: 0,
-        shadowOffsetY: 0,
-        shadowColor: 'rgba(0,0,0,0.5)'
-    }
-};
-option = {
-    backgroundColor: '#fff',
-    legend: {
-        data: ['bar', 'bar2', 'bar3', 'bar4'],
-        align: 'left',
-        left: 10
-    },
-    brush: {
-        toolbox: ['rect', 'polygon', 'lineX', 'lineY', 'keep', 'clear'],
-        xAxisIndex: 0
-    },
-    toolbox: {
-        feature: {
-            magicType: {
-                type: ['stack', 'tiled']
-            },
-            dataView: {}
+var option = {
+    tooltip: {
+        trigger: 'axis',
+        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
         }
     },
-    tooltip: {},
-    xAxis: {
-        data: xAxisData,
-        name: 'X Axis',
-        silent: false,
-        axisLine: {onZero: true},
-        splitLine: {show: false},
-        splitArea: {show: false}
-    },
-    yAxis: {
-        inverse: true,
-        splitArea: {show: false}
+    legend: {
+        data: ['不及格', '及格', '良好', '优秀']
     },
     grid: {
-        left: 100
+        left: '10%',
+        right: '10%',
+        bottom: '30%',
+        containLabel: true
     },
-    visualMap: {
-        type: 'continuous',
-        dimension: 1,
-        text: ['High', 'Low'],
-        inverse: true,
-        itemHeight: 200,
-        calculable: true,
-        min: -2,
-        max: 6,
-        top: 60,
-        left: 10,
-        inRange: {
-            colorLightness: [0.4, 0.8]
-        },
-        outOfRange: {
-            color: '#bbb'
-        },
-        controller: {
-            inRange: {
-                color: '#2f4554'
-            }
+    xAxis: [
+        {
+            type: 'category',
+            data: ['三年级', '四年级', '五年级', '六年级']
         }
-    },
+    ],
+    yAxis: [
+        {
+            type: 'value'
+        }
+    ],
     series: [
         {
-            name: 'bar',
+            name: '不及格',
             type: 'bar',
-            stack: 'one',
-            itemStyle: itemStyle,
-            data: data1
+            stack: '男',
+            data: [0, 0.01, 0, 0]
         },
         {
-            name: 'bar2',
+            name: '及格',
             type: 'bar',
-            stack: 'one',
-            itemStyle: itemStyle,
-            data: data2
+            stack: '男',
+            data: [0.49, 0.42, 0.42, 0.29]
         },
         {
-            name: 'bar3',
+            name: '良好',
             type: 'bar',
-            stack: 'two',
-            itemStyle: itemStyle,
-            data: data3
+            stack: '男',
+            data: [0.30, 0.32, 0.21, 0.30]
         },
         {
-            name: 'bar4',
+            name: '优秀',
             type: 'bar',
-            stack: 'two',
-            itemStyle: itemStyle,
-            data: data4
+            barWidth: 20,
+            stack: '男',
+            data: [0.21, 0.25, 0.37, 0.41]
+        },
+        {
+            name: '不及格',
+            type: 'bar',
+            stack: '女',
+            data: [0, 0, 0, 0]
+        },
+        {
+            name: '及格',
+            type: 'bar',
+            stack: '女',
+            data: [0.59, 0.38, 0.44, 0.33]
+        },
+        {
+            name: '良好',
+            type: 'bar',
+            stack: '女',
+            data: [0.24, 0.36, 0.21, 0.31]
+        },
+        {
+            name: '优秀',
+            type: 'bar',
+            barWidth: 20,
+            stack: '女',
+            data: [0.17, 0.26, 0.35, 0.36]
         }
     ]
 };
+
 myChartLiLang.setOption(option);
 //力量 end
 
 
-//柔韧 start
+//速度 start
 var myChartRouRen = echarts.init(document.getElementById('myChartRouRen'));
 var option = {
     tooltip: {
@@ -700,7 +746,7 @@ var option = {
         }
     },
     legend: {
-        data: ['利润', '支出', '收入']
+        data: ['女生', '男生']
     },
     grid: {
         left: '3%',
@@ -717,12 +763,12 @@ var option = {
         {
             type: 'category',
             axisTick: {show: false},
-            data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+            data: ['六年级', '五年级', '四年级', '三年级', '二年级','一年级']
         }
     ],
     series: [
         {
-            name: '利润',
+            name: '女生',
             type: 'bar',
             label: {
                 normal: {
@@ -730,10 +776,10 @@ var option = {
                     position: 'inside'
                 }
             },
-            data: [200, 170, 240, 244, 200, 220, 210]
+            data: [75.09,67.10, 70.66, 71.59,73.92, 75.81]
         },
         {
-            name: '收入',
+            name: '男生',
             type: 'bar',
             stack: '总量',
             label: {
@@ -741,129 +787,117 @@ var option = {
                     show: true
                 }
             },
-            data: [320, 302, 341, 374, 390, 450, 420]
-        },
-        {
-            name: '支出',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'left'
-                }
-            },
-            data: [-120, -132, -101, -134, -190, -230, -210]
+            data: [67.07 , 64.80 , 68.17, 66.05,68.64,58.51]
         }
+
     ]
 };
+
 myChartRouRen.setOption(option);
-//柔韧 end
+//速度 end
 
 
 //耐力 start
-var myChartNaiLi = echarts.init(document.getElementById('myChartNaiLi'));
+var myChartNaiLiNu = echarts.init(document.getElementById('myChartNaiLiNu'));
 var option = {
     tooltip: {
-        trigger: 'axis',
-        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-        }
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
     legend: {
-        data: ['直接访问', '邮件营销', '联盟广告', '视频广告', '搜索引擎']
-    },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
-    },
-    xAxis: {
-        type: 'value'
-    },
-    yAxis: {
-        type: 'category',
-        data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        // orient: 'vertical',
+        // x: 'left',
+        data:['不及格','及格','良好','优秀']
     },
     series: [
         {
-            name: '直接访问',
-            type: 'bar',
-            stack: '总量',
+            name:'访问来源',
+            type:'pie',
+            radius: ['65%', '80%'],
+            avoidLabelOverlap: false,
             label: {
                 normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
                     show: true,
-                    position: 'insideRight'
+                    textStyle: {
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
                 }
             },
-            data: [320, 302, 301, 334, 390, 330, 320]
-        },
-        {
-            name: '邮件营销',
-            type: 'bar',
-            stack: '总量',
-            label: {
+
+            labelLine: {
                 normal: {
-                    show: true,
-                    position: 'insideRight'
+                    show: false
                 }
             },
-            data: [120, 132, 101, 134, 90, 230, 210]
-        },
-        {
-            name: '联盟广告',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [220, 182, 191, 234, 290, 330, 310]
-        },
-        {
-            name: '视频广告',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [150, 212, 201, 154, 190, 330, 410]
-        },
-        {
-            name: '搜索引擎',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'insideRight'
-                }
-            },
-            data: [820, 832, 901, 934, 1290, 1330, 1320]
+            data:[
+                {value:1, name:'不及格'},
+                {value:60, name:'及格'},
+                {value:20, name:'良好'},
+                {value:19, name:'优秀'}
+            ]
+
         }
     ]
 };
-myChartNaiLi.setOption(option);
+myChartNaiLiNu.setOption(option);
+var myChartNaiLiNan = echarts.init(document.getElementById('myChartNaiLiNan'));
+var option = {
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        data:['不及格','及格','良好','优秀']
+    },
+    series: [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius: ['65%', '80%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: false,
+                    position: 'center'
+                },
+                emphasis: {
+                    show: true,
+                    textStyle: {
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: false
+                }
+            },
+            data:[
+                {value:10, name:'不及格'},
+                {value:61, name:'及格'},
+                {value:16, name:'良好'},
+                {value:13, name:'优秀'}
+            ]
+        }
+    ]
+};
+myChartNaiLiNan.setOption(option);
 //耐力 end
 
-//速度 start
+//柔韧 start
 var myChartSuDu = echarts.init(document.getElementById('myChartSuDu'));
 var option = {
-    title: {
-        text: '未来一周气温变化',
-        subtext: '纯属虚构'
-    },
     tooltip: {
         trigger: 'axis'
     },
     legend: {
-        data: ['最高气温', '最低气温']
+        data: ['女生', '男生']
     },
     toolbox: {
         show: true,
@@ -880,19 +914,21 @@ var option = {
     xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: ['周一', '周二', '周三', '周四', '周五', '周六', '周日']
+        data: ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级']
     },
     yAxis: {
+        min: 80,
+        max: 100,
         type: 'value',
         axisLabel: {
-            formatter: '{value} °C'
+            formatter: '{value}'
         }
     },
     series: [
         {
-            name: '最高气温',
+            name: '女生',
             type: 'line',
-            data: [11, 11, 15, 13, 12, 13, 10],
+            data: [91, 91, 89, 88, 87, 91],
             markPoint: {
                 data: [
                     {type: 'max', name: '最大值'},
@@ -906,12 +942,13 @@ var option = {
             }
         },
         {
-            name: '最低气温',
+            name: '男生',
             type: 'line',
-            data: [1, -2, 2, 5, 3, 2, 0],
+            data: [89, 91, 87, 88, 85, 86],
             markPoint: {
                 data: [
-                    {name: '周最低', value: -2, xAxis: 1, yAxis: -1.5}
+                    {type: 'max', name: '最大值'},
+                    {type: 'min', name: '最小值'}
                 ]
             },
             markLine: {
@@ -937,25 +974,27 @@ var option = {
         }
     ]
 };
-myChartSuDu.setOption(option);
-//速度 end
 
-//结论 start
-var myChartJeLun = echarts.init(document.getElementById('myChartJeLun'));
-var hours = ['12a', '1a', '2a', '3a', '4a', '5a', '6a',
-    '7a', '8a', '9a', '10a', '11a',
-    '12p', '1p', '2p', '3p', '4p', '5p',
-    '6p', '7p', '8p', '9p', '10p', '11p'];
-var days = ['Saturday', 'Friday', 'Thursday',
-    'Wednesday', 'Tuesday', 'Monday', 'Sunday'];
-var data = [[0, 0, 5], [0, 1, 1], [0, 2, 0], [0, 3, 0], [0, 4, 0], [0, 5, 0], [0, 6, 0], [0, 7, 0], [0, 8, 0], [0, 9, 0], [0, 10, 0], [0, 11, 2], [0, 12, 4], [0, 13, 1], [0, 14, 1], [0, 15, 3], [0, 16, 4], [0, 17, 6], [0, 18, 4], [0, 19, 4], [0, 20, 3], [0, 21, 3], [0, 22, 2], [0, 23, 5], [1, 0, 7], [1, 1, 0], [1, 2, 0], [1, 3, 0], [1, 4, 0], [1, 5, 0], [1, 6, 0], [1, 7, 0], [1, 8, 0], [1, 9, 0], [1, 10, 5], [1, 11, 2], [1, 12, 2], [1, 13, 6], [1, 14, 9], [1, 15, 11], [1, 16, 6], [1, 17, 7], [1, 18, 8], [1, 19, 12], [1, 20, 5], [1, 21, 5], [1, 22, 7], [1, 23, 2], [2, 0, 1], [2, 1, 1], [2, 2, 0], [2, 3, 0], [2, 4, 0], [2, 5, 0], [2, 6, 0], [2, 7, 0], [2, 8, 0], [2, 9, 0], [2, 10, 3], [2, 11, 2], [2, 12, 1], [2, 13, 9], [2, 14, 8], [2, 15, 10], [2, 16, 6], [2, 17, 5], [2, 18, 5], [2, 19, 5], [2, 20, 7], [2, 21, 4], [2, 22, 2], [2, 23, 4], [3, 0, 7], [3, 1, 3], [3, 2, 0], [3, 3, 0], [3, 4, 0], [3, 5, 0], [3, 6, 0], [3, 7, 0], [3, 8, 1], [3, 9, 0], [3, 10, 5], [3, 11, 4], [3, 12, 7], [3, 13, 14], [3, 14, 13], [3, 15, 12], [3, 16, 9], [3, 17, 5], [3, 18, 5], [3, 19, 10], [3, 20, 6], [3, 21, 4], [3, 22, 4], [3, 23, 1], [4, 0, 1], [4, 1, 3], [4, 2, 0], [4, 3, 0], [4, 4, 0], [4, 5, 1], [4, 6, 0], [4, 7, 0], [4, 8, 0], [4, 9, 2], [4, 10, 4], [4, 11, 4], [4, 12, 2], [4, 13, 4], [4, 14, 4], [4, 15, 14], [4, 16, 12], [4, 17, 1], [4, 18, 8], [4, 19, 5], [4, 20, 3], [4, 21, 7], [4, 22, 3], [4, 23, 0], [5, 0, 2], [5, 1, 1], [5, 2, 0], [5, 3, 3], [5, 4, 0], [5, 5, 0], [5, 6, 0], [5, 7, 0], [5, 8, 2], [5, 9, 0], [5, 10, 4], [5, 11, 1], [5, 12, 5], [5, 13, 10], [5, 14, 5], [5, 15, 7], [5, 16, 11], [5, 17, 6], [5, 18, 0], [5, 19, 5], [5, 20, 3], [5, 21, 4], [5, 22, 2], [5, 23, 0], [6, 0, 1], [6, 1, 0], [6, 2, 0], [6, 3, 0], [6, 4, 0], [6, 5, 0], [6, 6, 0], [6, 7, 0], [6, 8, 0], [6, 9, 0], [6, 10, 1], [6, 11, 0], [6, 12, 2], [6, 13, 1], [6, 14, 3], [6, 15, 4], [6, 16, 0], [6, 17, 0], [6, 18, 0], [6, 19, 0], [6, 20, 1], [6, 21, 2], [6, 22, 2], [6, 23, 6]];
+myChartSuDu.setOption(option);
+//柔韧 end
+
+//结论女 start
+var myChartJeLunNu = echarts.init(document.getElementById('myChartJeLunNu'));
+var hours = ['总分', '速度', '耐力', '柔韧', '爆发力', '力量','BMI','肺活量'];
+var days =  ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级'];
+
+var data = [[0,0,6],[0,1,4],[0,2,0],[0,3,8],[0,4,4],[0,5,0],[0,6,8],[0,7,4],[1,0,6],[1,1,4],[1,2,0],[1,3,8],[1,4,6],[1,5,0],[1,6,8],[1,7,6],[2,0,6],[2,1,4],[2,2,0],[2,3,6],[2,4,6],[2,5,4],[2,6,6],[2,7,6],[3,0,6],[3,1,4],[3,2,0],[3,3,6],[3,4,6],[3,5,6],[3,6,6],[3,7,6],[4,0,6],[4,1,4],[4,2,4],[4,3,6],[4,4,6],[4,5,6],[4,6,6],[4,7,6],[5,0,6],[5,1,4],[5,2,6],[5,3,8],[5,4,6],[5,5,6],[5,6,6],[5,7,6]];
+
 data = data.map(function (item) {
     return [item[1], item[0], item[2] || '-'];
 });
-var option = {
+
+option = {
     tooltip: {
+        show:false,
         position: 'top'
     },
+
     animation: false,
     grid: {
         height: '50%',
@@ -976,12 +1015,32 @@ var option = {
         }
     },
     visualMap: {
-        min: 0,
-        max: 10,
-        calculable: true,
+        type:'piecewise',
+        pieces: [
+            {value:2,color:'#c23532'},
+            {value:4,color:'#304554'},
+            {value:6,color:'#60a0a8'},
+            {value:8,color:'#d58165'}
+        ],
+        formatter: function (value, value2) {
+            if(value==2){
+                return "不及格" +
+                    "(60分以下)"
+            }
+            else if(value==4){
+                return "及格(60-80分)"
+            }
+            else if(value==6){
+                return "良好(80-90分)"
+            }
+            else if(value==8){
+                return "优秀(90分以上)"
+            }
+        },
         orient: 'horizontal',
         left: 'center',
-        bottom: '15%'
+        bottom: '15%',
+
     },
     series: [{
         name: 'Punch Card',
@@ -989,7 +1048,22 @@ var option = {
         data: data,
         label: {
             normal: {
-                show: true
+                show: true,
+                formatter:function(params){
+                    if(params.data[2]==2){
+                        return "不及格"
+                    }
+                    else if(params.data[2]==4){
+                        return "及格"
+                    }
+                    else if(params.data[2]==6){
+                        return "良好"
+                    }
+                    else if(params.data[2]==8){
+                        return "优秀"
+                    }
+                }
+
             }
         },
         itemStyle: {
@@ -1000,11 +1074,109 @@ var option = {
         }
     }]
 };
-myChartJeLun.setOption(option);
-//结论 end
+
+myChartJeLunNu.setOption(option);
+//结论女 end
 
 
+//结论男 start
+var myChartJeLunNan = echarts.init(document.getElementById('myChartJeLunNan'));
+var hours = ['总分', '速度', '耐力', '柔韧', '爆发力', '力量','BMI','肺活量'];
+var days =  ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级'];
 
+var data = [[0,0,6],[0,1,4],[0,2,0],[0,3,8],[0,4,4],[0,5,0],[0,6,8],[0,7,4],[1,0,6],[1,1,4],[1,2,0],[1,3,8],[1,4,6],[1,5,0],[1,6,8],[1,7,6],[2,0,6],[2,1,4],[2,2,0],[2,3,6],[2,4,6],[2,5,4],[2,6,6],[2,7,6],[3,0,6],[3,1,4],[3,2,0],[3,3,6],[3,4,6],[3,5,6],[3,6,6],[3,7,6],[4,0,6],[4,1,4],[4,2,4],[4,3,6],[4,4,6],[4,5,6],[4,6,6],[4,7,6],[5,0,6],[5,1,4],[5,2,6],[5,3,8],[5,4,6],[5,5,6],[5,6,6],[5,7,6]];
+
+data = data.map(function (item) {
+    return [item[1], item[0], item[2] || '-'];
+});
+
+option = {
+    tooltip: {
+        show:false,
+        position: 'top'
+    },
+
+    animation: false,
+    grid: {
+        height: '50%',
+        y: '10%'
+    },
+    xAxis: {
+        type: 'category',
+        data: hours,
+        splitArea: {
+            show: true
+        }
+    },
+    yAxis: {
+        type: 'category',
+        data: days,
+        splitArea: {
+            show: true
+        }
+    },
+    visualMap: {
+        type:'piecewise',
+        pieces: [
+            {value:2,color:'#c23532'},
+            {value:4,color:'#304554'},
+            {value:6,color:'#60a0a8'},
+            {value:8,color:'#d58165'}
+        ],
+        formatter: function (value, value2) {
+            if(value==2){
+                return "不及格(60分以下)"
+            }
+            else if(value==4){
+                return "及格(60-80分)"
+            }
+            else if(value==6){
+                return "良好(80-90分)"
+            }
+            else if(value==8){
+                return "优秀(90分以上)"
+            }
+        },
+        orient: 'horizontal',
+        left: 'center',
+        bottom: '15%',
+
+    },
+    series: [{
+        name: 'Punch Card',
+        type: 'heatmap',
+        data: data,
+        label: {
+            normal: {
+                show: true,
+                formatter:function(params){
+                    if(params.data[2]==2){
+                        return "不及格"
+                    }
+                    else if(params.data[2]==4){
+                        return "及格"
+                    }
+                    else if(params.data[2]==6){
+                        return "良好"
+                    }
+                    else if(params.data[2]==8){
+                        return "优秀"
+                    }
+                }
+
+            }
+        },
+        itemStyle: {
+            emphasis: {
+                shadowBlur: 10,
+                shadowColor: 'rgba(0, 0, 0, 0.5)'
+            }
+        }
+    }]
+};
+
+myChartJeLunNan.setOption(option);
+//结论男 end
 
 
 

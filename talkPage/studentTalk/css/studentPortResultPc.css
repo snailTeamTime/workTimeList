@@ -10,6 +10,18 @@ html,body{height: 100%;width: 100%;}
 
 /*背景色 end*/
 
+
+
+/*体质健康图标 start*/
+.conTxt{font-size: 20px;text-align: center;margin-top: 30px;}
+.conTxt2{font-size: 20px;text-align: center;}
+.conIcon {margin: auto;margin-bottom: 10px;height: 60px;width: 60px;border-radius:50px!important;}
+.conIcon img{width: 100%;height: 100%;}
+
+
+
+/*体质健康图标 end*/
+
 /*报告结果图标题头 start*/
 .portlet>.portlet-title>.caption>.caption-helper {padding: 0;margin: 0;line-height: 13px;color: #9eacb4;font-size: 16px;font-weight: 400;display: block;margin-top: 10px;}
 /*报告结果图标题头 end*/
@@ -41,17 +53,28 @@ html,body{height: 100%;width: 100%;}
     .canvasBox1{width: 100%;height: 4rem;float: left;}
 }
 
-.verticalTable{float: left; width: 100%;}
+.verticalTable{ width: 100%;}
 .verticalTable table thead tr th{font-size: 16px; font-weight: 600;color: #444;padding: 10px;text-align: center;white-space: nowrap; border: 1px solid #dddddd; }
 .verticalTable table tbody tr td{font-size: 14px;color: #555;padding: 8px;text-align: left; border: 1px solid #dddddd; word-break: break-all;}
 .verticalTableFirstChild {font-size: 16px;font-weight: 600;color: #555;padding: 8px;text-align: center;white-space: nowrap; border: 1px solid #dddddd;}
 
 
-.verticalTable2{float: left; width: 100%;margin-bottom: 25px;}
-.verticalTable2 table thead tr th{font-size: 16px; font-weight: 600;color: #444;padding: 10px;text-align: center;white-space: nowrap; border: 1px solid #dddddd; }
-.verticalTable2 table tbody tr td{font-size: 14px;color: #555;padding: 8px;text-align: left; border: 1px solid #dddddd; word-break: break-all;}
-.verticalTableFirstChild {font-size: 16px;font-weight: 600;color: #555;padding: 8px;text-align: center;white-space: nowrap; border: 1px solid #dddddd;}
+.verticalTable2{ width: 100%;margin-bottom: 25px;}
+.verticalTable2 table thead tr th{font-size: 16px; font-weight: 600;color: #444;padding: 10px;text-align: center;white-space: nowrap; border: 1px solid #dddddd; background-color: #fff;}
+.verticalTable2 table tbody tr td{font-size: 14px;color: #555;padding: 8px; border: 1px solid #dddddd; word-break: break-all;}
 .verticalTable2  table tbody tr:nth-child(odd){background:#F4F4F4;}
+
+.verticalTable3{ width: 100%;margin-bottom: 25px;}
+.verticalTable3 table thead tr th{font-size: 14px; color: #444;text-align: center;white-space: nowrap; border: 1px solid #dddddd; }
+.verticalTable3 table tbody tr td{font-size: 12px;color: #555;padding: 8px;text-align: center; border: 1px solid #dddddd; word-break: break-all;}
+.verticalTable3  table tbody tr:nth-child(odd){background:#F4F4F4;}
+
+/*行高固定 start*/
+.verticalTable4{ width: 100%;margin-bottom: 25px;}
+.verticalTable4 table thead tr th{font-size: 16px; font-weight: 600;color: #444;padding: 10px;text-align: center;white-space: nowrap; border: 1px solid #dddddd; background-color: #fff;}
+.verticalTable4 table tbody tr td{font-size: 14px;color: #555;padding: 8px; border: 1px solid #dddddd; word-break: break-all;height: 60px;}
+.verticalTable4  table tbody tr:nth-child(odd){background:#F4F4F4;}
+/*行高固定 end*/
 
 
 .text-denger{color: #ff2a0c;}
