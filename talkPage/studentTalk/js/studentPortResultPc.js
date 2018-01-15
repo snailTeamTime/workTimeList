@@ -652,7 +652,7 @@ var option = {
         data: data[0],
         type: 'scatter',
         symbolSize: function (data) {
-            return Math.sqrt(data[2])/1;
+            return Math.sqrt(data[2])/1.5;
         },
         label: {
             emphasis: {
@@ -682,7 +682,7 @@ var option = {
         data: data[1],
         type: 'scatter',
         symbolSize: function (data) {
-            return Math.sqrt(data[2])/1;
+            return Math.sqrt(data[2])/1.5;
         },
         label: {
             emphasis: {
@@ -970,7 +970,7 @@ var option = {
     },
     series: [
         {
-            name:'访问来源',
+            name:'耐力百分比',
             type:'pie',
             radius: ['50%', '65%'],//['75%', '95%'],
             avoidLabelOverlap: false,
@@ -1024,7 +1024,7 @@ var option = {
     },
     series: [
         {
-            name:'访问来源',
+            name:'耐力百分比',
             type:'pie',
             radius: ['50%', '65%'],//['75%', '95%'],
             avoidLabelOverlap: false,
