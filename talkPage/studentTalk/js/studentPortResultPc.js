@@ -1,5 +1,5 @@
-var comprehensiveScore = 100;
-var comprehensiveScoreName =2;
+var comprehensiveScore = 98;
+var comprehensiveScoreName =5;
 var myActivityChart = echarts.init(document.getElementById('evaluationScore'));
 
 var pieOption = {
@@ -25,7 +25,7 @@ var pieOption = {
                 value: comprehensiveScore,
                 // name: '{a|' + comprehensiveScore + '\n}{c|已超越' + comprehensiveScore + '%学校}',
                 // name: '{a|' + comprehensiveScore + '\n}{c|第' + '2' + '名}',
-                name: '{a|第' + comprehensiveScoreName + '名}',
+                name: '{a|第' + comprehensiveScoreName + '名\n}{c|已超越' + comprehensiveScore + '%学校}',
                 itemStyle: {
                     normal: {
                         color: '#40D8C1'
