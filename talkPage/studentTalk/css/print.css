@@ -9,17 +9,22 @@
 
 
 html,body{height: 100%;width: 100%;}
-.text-indent{text-indent:2em;line-height: 1.7;}
+.text-indent{text-indent:2em;line-height: 2;}
 
 /*背景色 start*/
 /*灰色*/
 .bg-gray{background-color:#e9ecf3; }
 .bg-white{background-color: #fff;}
 
+
 /*背景色 end*/
+
+
 
 /*体质健康图标 start*/
 .chartRow7 .col-md-2{width: 14.28%;float: left;position: relative;min-height: 1px;padding-right: 0px;padding-left: 0px;}
+
+
 
 .conTxt{font-size: 15px;text-align: center;margin-top: 30px;}
 .conTxt2{font-size: 16px;text-align: center;}
@@ -35,10 +40,18 @@ html,body{height: 100%;width: 100%;}
 /*报告结果图标题头 end*/
 
 
+
+/*tab切换 start*/
+.nav-tabs>li {float: left;margin-bottom: -1px;width: 33.33%;text-align: center;font-size: 16px;}
+.nav-tabs>li>a {margin-right: 2px;line-height: 1.42857143;border: 1px solid transparent;border-radius: 4px 4px 0 0;color: #999;}
+.nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {color: #555;cursor: default;background-color: #fff;border: 1px solid #fff;border-bottom: 3px solid #00BCD4;border-bottom-color: #00BCD4;}
+/*tab切换 end*/
+
+
 /*报告结果 start*/
 
-.allSection {width: 1000px;margin: auto;padding-bottom: 30px;}
-.publicHead{  font-size: 20px;text-align: center;height: 50px;line-height: 50px;background-image: url("../images/top-bg.jpg");background-size: 100% 100%;background-repeat: no-repeat;color: #fff;margin-bottom: 10px;}
+.allSection {max-width: 1000px;margin: auto;padding-bottom: 30px; }
+.publicHead{  font-size: 20px;text-align: center;height: 100px;line-height: 100px;background-image: url("../images/top-bg.jpg");background-size: 100% 100%;background-repeat: no-repeat;color: #fff;margin-bottom: 25px;}
 
 
 .reportSection{clear: both;width: 100%;}
@@ -47,16 +60,15 @@ html,body{height: 100%;width: 100%;}
 .reportTitle .icon1{display: inline-block;width: 6px;height:30px;background-color:#009cff;position: relative;top: 6px;margin-right: 10px; }
 
 
-
 .verticalTable{ width: 100%;}
-.verticalTable table thead tr th{font-size: 16px; font-weight: 600;color: #444;padding: 10px;text-align: center;white-space: nowrap; border: 1px solid #dddddd; }
-.verticalTable table tbody tr td{font-size: 14px;color: #555;padding: 8px;text-align: left; border: 1px solid #dddddd; word-break: break-all;}
+.verticalTable table thead tr th{font-size: 16px; font-weight: 600;color: #444;padding: 14px;text-align: center;white-space: nowrap; border: 1px solid #dddddd; }
+.verticalTable table tbody tr td{font-size: 14px;color: #555;padding: 14px;text-align: left; border: 1px solid #dddddd; word-break: break-all;}
 .verticalTableFirstChild {font-size: 16px;font-weight: 600;color: #555;padding: 8px;text-align: center;white-space: nowrap; border: 1px solid #dddddd;}
 
 
-.verticalTable2{ width: 100%;margin-bottom: 10px;}
+.verticalTable2{ width: 100%;margin-bottom: 25px;}
 .verticalTable2 table thead tr th{font-size: 16px; font-weight: 600;color: #444;padding: 10px;text-align: center;white-space: nowrap; border: 1px solid #dddddd; background-color: #fff;}
-.verticalTable2 table tbody tr td{font-size: 14px;color: #555;padding: 8px; border: 1px solid #dddddd; word-break: break-all;}
+.verticalTable2 table tbody tr td{font-size: 14px;color: #555;padding: 10px; border: 1px solid #dddddd; word-break: break-all;}
 .verticalTable2  table tbody tr:nth-child(odd){background:#F4F4F4;}
 
 .verticalTable3{ width: 100%;margin-bottom: 25px;}
@@ -78,8 +90,9 @@ html,body{height: 100%;width: 100%;}
 
 .printBtn{display: none;}
 /*分享结果 分页*/
-.print_box1{margin-top: 220pt;padding-top: 30pt;}
-.print_FXJG{padding-top: 30pt;}
+.print_FXJG{padding-top: 85pt;}
+.print_BaoFaLi{margin-top: 320pt;padding-top: 30pt;}
+
 .print_SuDu-_BOX{padding-top: 240pt;}
 .print_rouRen{padding-top: 250pt;}
 .print_JieLun{padding-top: 380pt;}

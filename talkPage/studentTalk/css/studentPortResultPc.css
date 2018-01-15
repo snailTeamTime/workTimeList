@@ -1,6 +1,6 @@
 @charset "UTF-8";
 html,body{height: 100%;width: 100%;}
-.text-indent{text-indent:2em;line-height: 1.7;}
+.text-indent{text-indent:2em;line-height: 2;}
 
 /*背景色 start*/
 /*灰色*/
@@ -58,8 +58,8 @@ html,body{height: 100%;width: 100%;}
 
 
 .verticalTable2{ width: 100%;margin-bottom: 25px;}
-.verticalTable2 table thead tr th{font-size: 16px; font-weight: 600;color: #444;padding: 10px;text-align: center;white-space: nowrap; border: 1px solid #dddddd; background-color: #fff;}
-.verticalTable2 table tbody tr td{font-size: 14px;color: #555;padding: 8px; border: 1px solid #dddddd; word-break: break-all;}
+.verticalTable2 table thead tr th{font-size: 16px; font-weight: 600;color: #444;padding: 14px;text-align: center;white-space: nowrap; border: 1px solid #dddddd; background-color: #fff;}
+.verticalTable2 table tbody tr td{font-size: 14px;color: #555;padding: 14px; border: 1px solid #dddddd; word-break: break-all;}
 .verticalTable2  table tbody tr:nth-child(odd){background:#F4F4F4;}
 
 .verticalTable3{ width: 100%;margin-bottom: 25px;}
@@ -80,7 +80,7 @@ html,body{height: 100%;width: 100%;}
 
 #reportCanvas1,
 #reportCanvas2,
-#reportCanvas3{height: 300px;}
+#reportCanvas3{height: 350px;}
 
 
 
