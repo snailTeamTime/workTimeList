@@ -608,14 +608,15 @@ myChartSangJiTu.setOption(option);
 //BMI统计图 end
 
 
-
 //肺活量 气泡图 start
 var myChartFeiHuoLang = echarts.init(document.getElementById('myChartFeiHuoLang'));
 //气泡图直接改data数据就可以了
+//修改区域 start
 var data = [
     [[1, 71.82, 833, '一年级', "女"], [2, 80.59, 1259, '二年级', '女'], [3, 80.59, 1459, '三年级', "女"], [4, 81.58, 1758, '四年级', '女'], [5, 80.44, 1894, '五年级', "女"], [6, 85.87, 2287, '六年级', '女']],
     [[1, 64.25, 828, '一年级', "男"], [2, 73.50, 1231, '二年级', '男'], [3, 75.46, 1537, '三年级', "男"], [4, 75.47, 1778, '四年级', '男'], [5, 73.90, 2011, '五年级', "男"], [6, 76.84, 2384, '六年级', '男']]];
 //气泡图直接改data数据就可以了
+//修改区域 end
 var option = {
     // backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
     //     offset: 0,
@@ -713,6 +714,13 @@ myChartFeiHuoLang.setOption(option);
 
 
 //爆发力 start
+//修改区域 start
+var burstFailVal = [0.0455, 0.0044, 0.0089, 0, 0, 0];//不及格
+var passFailVal = [0.7238, 0.3739, 0.4159, 0.2890, 0.3102, 0.3254];//及格
+var goodFailVal = [0.1119, 0.2304, 0.2478, 0.2243, 0.2653, 0.201];//良好
+var veryGoodVal = [0.1188, 0.3913, 0.3274, 0.4867, 0.4245, 0.4736];//优秀
+//修改区域 end
+
 var myChartBaoFaLi = echarts.init(document.getElementById('myChartBaoFaLi'), themeOption);
 option = {
     angleAxis: {
@@ -729,25 +737,25 @@ option = {
     polar: {},
     series: [{
         type: 'bar',
-        data: [0.0455, 0.0044, 0.0089, 0, 0, 0],
+        data: burstFailVal,
         coordinateSystem: 'polar',
         name: '不及格',
         stack: 'a'
     }, {
         type: 'bar',
-        data: [0.7238, 0.3739, 0.4159, 0.2890, 0.3102, 0.3254],
+        data: passFailVal,
         coordinateSystem: 'polar',
         name: '及格',
         stack: 'a'
     }, {
         type: 'bar',
-        data: [0.1119, 0.2304, 0.2478, 0.2243, 0.2653, 0.201],
+        data: goodFailVal,
         coordinateSystem: 'polar',
         name: '良好',
         stack: 'a'
     }, {
         type: 'bar',
-        data: [0.1188, 0.3913, 0.3274, 0.4867, 0.4245, 0.4736],
+        data: veryGoodVal,
         coordinateSystem: 'polar',
         name: '优秀',
         stack: 'a'
@@ -757,12 +765,23 @@ option = {
         data: ['不及格', '及格', '良好', '优秀']
     }
 };
-
-
 myChartBaoFaLi.setOption(option);
 //爆发力 end
 
 //力量 start
+//修改区域 start
+// 男
+var powerFailValMan = [0, 1, 0, 0];//不及格
+var passPowerValMan = [49, 42, 42, 29];//及格
+var goodPowerValMan = [30, 32, 21, 30];//良好
+var veryGoodPowerValMan = [21, 25, 37, 41];//优秀
+
+//女
+var powerFailValWoman = [0, 0, 0, 0];//不及格
+var passPowerValWoman = [59, 38, 44, 33];//及格
+var goodPowerValWoman = [24, 36, 21, 31];//良好
+var veryGoodPowerValWoman = [17, 26, 35, 36];//优秀
+//修改区域 end
 var myChartLiLang = echarts.init(document.getElementById('myChartLiLang'));
 var option = {
     tooltip: {
@@ -797,19 +816,19 @@ var option = {
             name: '不及格',
             type: 'bar',
             stack: '男',
-            data: [0, 1, 0, 0]
+            data: powerFailValMan
         },
         {
             name: '及格',
             type: 'bar',
             stack: '男',
-            data: [49, 42, 42, 29]
+            data: passPowerValMan
         },
         {
             name: '良好',
             type: 'bar',
             stack: '男',
-            data: [30, 32, 21, 30]
+            data: goodPowerValMan
         },
         {
             name: '优秀',
@@ -825,25 +844,25 @@ var option = {
                     }
                 }
             },
-            data: [21, 25, 37, 41]
+            data: veryGoodPowerValMan
         },
         {
             name: '不及格',
             type: 'bar',
             stack: '女',
-            data: [0, 0, 0, 0]
+            data: powerFailValWoman
         },
         {
             name: '及格',
             type: 'bar',
             stack: '女',
-            data: [59, 38, 44, 33]
+            data: passPowerValWoman
         },
         {
             name: '良好',
             type: 'bar',
             stack: '女',
-            data: [24, 36, 21, 31]
+            data: goodPowerValWoman
         },
         {
             name: '优秀',
@@ -859,7 +878,7 @@ var option = {
                     }
                 }
             },
-            data: [17, 26, 35, 36]
+            data: veryGoodPowerValWoman
         }
     ]
 };
