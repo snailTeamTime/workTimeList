@@ -1,7 +1,7 @@
 //全区分数总排名
 var comprehensiveScore = 98;//超越学校百分数
 var comprehensiveScoreName = 5;//名次
-var myActivityChart = echarts.init(document.getElementById('evaluationScore'));
+var myActivityChart = echarts.init(document.getElementById('evaluationScore'),themeOption);
 var themeOption = 'macarons';
 var pieOption = {
     legend: {
@@ -78,7 +78,7 @@ myActivityChart.setOption(pieOption);
 
 var juniorGradeSchoolVal = [89.73, 72.18, 68.94, 90.44, 78.03];//校平均值
 var juniorGradAreaVal = [91.04, 70.17, 67.74, 86.19, 74.02];//区平均值
-var myChartRadarBox = echarts.init(document.getElementById('reportCanvas1'));
+var myChartRadarBox = echarts.init(document.getElementById('reportCanvas1'),themeOption);
 var option = {
     title: {
         text: '',//'体质健康总体情况',
@@ -168,7 +168,7 @@ myChartRadarBox.setOption(option);
 //中年级雷达图 start
 var centreGradeSchoolVal = [87.64, 78.46, 69.19, 87.90, 85.19, 81.03];//校平均值
 var centreGradAreaVal = [88.98, 77.95, 67.47, 83.82, 80.08, 73.41];//区平均值
-var myChartRadarBox2 = echarts.init(document.getElementById('reportCanvas2'));
+var myChartRadarBox2 = echarts.init(document.getElementById('reportCanvas2'),themeOption);
 var option = {
     title: {
         text: '',//'体质健康总体情况',
@@ -257,7 +257,7 @@ myChartRadarBox2.setOption(option);
 //高年级雷达图 start
 var highGradeSchoolVal = [88.06, 78.95, 68.11, 86.91, 86.10, 84.13, 75.46];//校平均值
 var highGradAreaVal = [88.98, 78.98, 67.94, 82.97, 79.94, 77.07, 72.28];//区平均值
-var myChartRadarBox3 = echarts.init(document.getElementById('reportCanvas3'));
+var myChartRadarBox3 = echarts.init(document.getElementById('reportCanvas3'),themeOption);
 var option = {
     title: {
         text: '',//'体质健康总体情况',
@@ -573,7 +573,7 @@ var BmiVal = [
     }
 ];
 
-var myChartSangJiTu = echarts.init(document.getElementById('myChartSangJiTu'));
+var myChartSangJiTu = echarts.init(document.getElementById('myChartSangJiTu'),themeOption);
 var option = {
     "tooltip": {},
     "series": [{
@@ -609,7 +609,7 @@ myChartSangJiTu.setOption(option);
 
 
 //肺活量 气泡图 start
-var myChartFeiHuoLang = echarts.init(document.getElementById('myChartFeiHuoLang'));
+var myChartFeiHuoLang = echarts.init(document.getElementById('myChartFeiHuoLang'),themeOption);
 //气泡图直接改data数据就可以了
 //修改区域 start
 var data = [
@@ -782,7 +782,7 @@ var passPowerValWoman = [59, 38, 44, 33];//及格
 var goodPowerValWoman = [24, 36, 21, 31];//良好
 var veryGoodPowerValWoman = [17, 26, 35, 36];//优秀
 //修改区域 end
-var myChartLiLang = echarts.init(document.getElementById('myChartLiLang'));
+var myChartLiLang = echarts.init(document.getElementById('myChartLiLang'),themeOption);
 var option = {
     tooltip: {
         trigger: 'axis',
@@ -892,7 +892,7 @@ myChartLiLang.setOption(option);
 var womanSpeedVal=[75.81, 73.92, 71.59, 70.66, 67.10, 75.09];//女生速度值
 var manSpeedVal=[58.51, 68.64, 68.17, 66.05, 64.80, 67.07];//男生速度值
 //修改区域 end
-var myChartRouRen = echarts.init(document.getElementById('myChartRouRen'));
+var myChartRouRen = echarts.init(document.getElementById('myChartRouRen'),themeOption);
 var option = {
     tooltip: {
         trigger: 'axis'
@@ -968,13 +968,18 @@ myChartRouRen.setOption(option);
 
 //耐力 start
 //修改区域 start
-
+var enduranceManVal = [
+    {value: 10, name: '不及格'},
+    {value: 61, name: '及格'},
+    {value: 16, name: '良好'},
+    {value: 13, name: '优秀'}
+];
 
 
 
 //修改区域 end
 
-var myChartNaiLiNan = echarts.init(document.getElementById('myChartNaiLiNan'));
+var myChartNaiLiNan = echarts.init(document.getElementById('myChartNaiLiNan'),themeOption);
 var option = {
     title: {
         text: '男生',
@@ -1015,18 +1020,13 @@ var option = {
                     length2: 15
                 }
             },
-            data: [
-                {value: 10, name: '不及格'},
-                {value: 61, name: '及格'},
-                {value: 16, name: '良好'},
-                {value: 13, name: '优秀'}
-            ]
+            data:enduranceManVal
         }
     ]
 };
 myChartNaiLiNan.setOption(option);
 
-var myChartNaiLiNu = echarts.init(document.getElementById('myChartNaiLiNu'));
+var myChartNaiLiNu = echarts.init(document.getElementById('myChartNaiLiNu'),themeOption);
 var option = {
     title: {
         text: '女生',
@@ -1083,7 +1083,7 @@ myChartNaiLiNu.setOption(option);
 //耐力 end
 
 //柔韧 start
-var myChartSuDu = echarts.init(document.getElementById('myChartSuDu'));
+var myChartSuDu = echarts.init(document.getElementById('myChartSuDu'),themeOption);
 var option = {
     tooltip: {
         trigger: 'axis',
@@ -1144,7 +1144,7 @@ myChartSuDu.setOption(option);
 //柔韧 end
 
 //结论女 start
-var myChartJeLunNu = echarts.init(document.getElementById('myChartJeLunNu'));
+var myChartJeLunNu = echarts.init(document.getElementById('myChartJeLunNu'),themeOption);
 var hours = ['总分', '速度', '耐力', '柔韧', '爆发力', '力量', 'BMI', '肺活量'];
 var days = ['六年级', '五年级', '四年级', '三年级', '二年级', '一年级'];
 
@@ -1182,10 +1182,10 @@ option = {
     visualMap: {
         type: 'piecewise',
         pieces: [
-            {value: 2, color: '#c23532'},
-            {value: 4, color: '#304554'},
-            {value: 6, color: '#60a0a8'},
-            {value: 8, color: '#d58165'}
+            {value: 2, color: '#34c7c9'},
+            {value: 4, color: '#b6a2df'},
+            {value: 6, color: '#5ab1ef'},
+            {value: 8, color: '#fcb980'}
         ],
         formatter: function (value, value2) {
             if (value == 2) {
@@ -1245,7 +1245,7 @@ myChartJeLunNu.setOption(option);
 
 
 //结论男 start
-var myChartJeLunNan = echarts.init(document.getElementById('myChartJeLunNan'));
+var myChartJeLunNan = echarts.init(document.getElementById('myChartJeLunNan'),themeOption);
 var hours = ['总分', '速度', '耐力', '柔韧', '爆发力', '力量', 'BMI', '肺活量'];
 var days = ['六年级', '五年级', '四年级', '三年级', '二年级', '一年级'];
 
@@ -1283,10 +1283,10 @@ option = {
     visualMap: {
         type: 'piecewise',
         pieces: [
-            {value: 2, color: '#c23532'},
-            {value: 4, color: '#304554'},
-            {value: 6, color: '#60a0a8'},
-            {value: 8, color: '#d58165'}
+            {value: 2, color: '#34c7c9'},
+            {value: 4, color: '#b6a2df'},
+            {value: 6, color: '#5ab1ef'},
+            {value: 8, color: '#fcb980'}
         ],
         formatter: function (value, value2) {
             if (value == 2) {
