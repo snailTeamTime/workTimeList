@@ -1,8 +1,8 @@
-var comprehensiveScore = 98;
-var comprehensiveScoreName =5;
+//全区分数总排名
+var comprehensiveScore = 98;//超越学校百分数
+var comprehensiveScoreName = 5;//名次
 var myActivityChart = echarts.init(document.getElementById('evaluationScore'));
-var themeOption='macarons';
-
+var themeOption = 'macarons';
 var pieOption = {
     legend: {
         show: false,
@@ -74,6 +74,10 @@ myActivityChart.setOption(pieOption);
 
 
 //雷达图 start
+// 低年级雷达图 start
+
+var juniorGradeSchoolVal = [89.73, 72.18, 68.94, 90.44, 78.03];//校平均值
+var juniorGradAreaVal = [91.04, 70.17, 67.74, 86.19, 74.02];//区平均值
 var myChartRadarBox = echarts.init(document.getElementById('reportCanvas1'));
 var option = {
     title: {
@@ -121,12 +125,12 @@ var option = {
         // areaStyle: {normal: {}},
         data: [
             {
-                value : [89.73,72.18,68.94,90.44,78.03],
+                value: juniorGradeSchoolVal,
                 name: '校平均值',
                 label: {
                     normal: {
                         show: true,
-                        color:'#34495e'
+                        color: '#34495e'
 
                     }
                 }
@@ -150,7 +154,7 @@ var option = {
             // areaStyle: {normal: {}},
             data: [
                 {
-                    value : [91.04,70.17,67.74,86.19,74.02],
+                    value: juniorGradAreaVal,
                     name: '区平均值'
                 }
 
@@ -159,6 +163,11 @@ var option = {
 };
 myChartRadarBox.setOption(option);
 
+// 低年级雷达图 end
+
+//中年级雷达图 start
+var centreGradeSchoolVal = [87.64, 78.46, 69.19, 87.90, 85.19, 81.03];//校平均值
+var centreGradAreaVal = [88.98, 77.95, 67.47, 83.82, 80.08, 73.41];//区平均值
 var myChartRadarBox2 = echarts.init(document.getElementById('reportCanvas2'));
 var option = {
     title: {
@@ -207,12 +216,12 @@ var option = {
         // areaStyle: {normal: {}},
         data: [
             {
-                value : [87.64,78.46,69.19,87.90,85.19,81.03],
+                value: centreGradeSchoolVal,
                 name: '校平均值',
                 label: {
                     normal: {
                         show: true,
-                        color:'#34495e'
+                        color: '#34495e'
                     }
                 }
             }
@@ -235,7 +244,7 @@ var option = {
             // areaStyle: {normal: {}},
             data: [
                 {
-                    value : [88.98,77.95,67.47,83.82,80.08,73.41],
+                    value: centreGradAreaVal,
                     name: '区平均值'
                 }
 
@@ -243,7 +252,11 @@ var option = {
         },]
 };
 myChartRadarBox2.setOption(option);
+//中年级雷达图 end
 
+//高年级雷达图 start
+var highGradeSchoolVal = [88.06, 78.95, 68.11, 86.91, 86.10, 84.13, 75.46];//校平均值
+var highGradAreaVal = [88.98, 78.98, 67.94, 82.97, 79.94, 77.07, 72.28];//区平均值
 var myChartRadarBox3 = echarts.init(document.getElementById('reportCanvas3'));
 var option = {
     title: {
@@ -292,12 +305,12 @@ var option = {
         // areaStyle: {normal: {}},
         data: [
             {
-                value : [88.06,78.95,68.11,86.91,86.10,84.13,75.46],
+                value: highGradeSchoolVal,
                 name: '校平均值',
                 label: {
                     normal: {
                         show: true,
-                        color:'#34495e'
+                        color: '#34495e'
                     }
                 }
             }
@@ -320,7 +333,7 @@ var option = {
             // areaStyle: {normal: {}},
             data: [
                 {
-                    value : [88.98,78.98,67.94,82.97,79.94,77.07,72.28],
+                    value: highGradAreaVal,
                     name: '区平均值'
                 }
 
@@ -329,294 +342,275 @@ var option = {
 };
 myChartRadarBox3.setOption(option);
 //雷达图 end
+//高年级雷达图 end
 
 //BMI统计图 start
-var myChartSangJiTu = echarts.init(document.getElementById('myChartSangJiTu'));
-var option =
+var BmiNotes = [{
+    "name": "一年级"
+}, {
+    "name": "二年级"
+}, {
+    "name": "三年级"
+}, {
+    "name": "四年级"
+}, {
+    "name": "五年级"
+}, {
+    "name": "六年级"
+}, {
+    "name": "超重"
+}, {
+    "name": "肥胖"
+}, {
+    "name": "正常体重"
+}, {
+    "name": "营养不良"
+}, {
+    "name": "不及格"
+}, {
+    "name": "及格"
+}, {
+    "name": "良好"
+}, {
+    "name": "优秀"
+}];
+
+var BmiVal = [
     {
-        "tooltip": {},
-        // "toolbox": {
-        //     "show": true,
-        //     "itemSize": 25,
-        //     "right": 12,
-        //     "feature": {
-        //         "saveAsImage": {
-        //             "show": true
-        //         }
-        //     }
-        // },
-        "series": [{
-            "type": "sankey",
-            "layout": "none",
-            "layoutIterations": 0,
-            "right":'5%',
-            /*"data": [{
-                "name": "2016A等级"
-            }, {
-                "name": "2017A等级"
-            }, {
-                "name": "2017B等级"
-            }, {
-                "name": "2017C等级"
-            }, {
-                "name": "2016B等级"
-            }, {
-                "name": "2016C等级"
-            }],*/
-            "data": [{
-                "name": "一年级"
-            }, {
-                "name": "二年级"
-            }, {
-                "name": "三年级"
-            }, {
-                "name": "四年级"
-            }, {
-                "name": "五年级"
-            }, {
-                "name": "六年级"
-            }, {
-                "name": "超重"
-            }, {
-                "name": "肥胖"
-            }, {
-                "name": "正常体重"
-            }, {
-                "name": "营养不良"
-            }, {
-                "name": "不及格"
-            }, {
-                "name": "及格"
-            }, {
-                "name": "良好"
-            }, {
-                "name": "优秀"
-            }],
-            "links": [
-                {
-                    "source": "一年级",
-                    "target": "超重",
-                    "value": "39"
-                },
-                {
-                    "source": "一年级",
-                    "target": "肥胖",
-                    "value": "38"
-                },
-                {
-                    "source": "一年级",
-                    "target": "正常体重",
-                    "value": "191"
-                },
-                {
-                    "source": "一年级",
-                    "target": "营养不良",
-                    "value": "18"
-                },
-                {
-                    "source": "正常体重",
-                    "target": "不及格",
-                    "value": "4"
-                },
-                {
-                    "source": "正常体重",
-                    "target": "及格",
-                    "value": "220"
-                },
-                {
-                    "source": "正常体重",
-                    "target": "良好",
-                    "value": "527"
-                },
-                {
-                    "source": "正常体重",
-                    "target": "优秀",
-                    "value": "134"
-                },
-                {
-                    "source": "营养不良",
-                    "target": "不及格",
-                    "value": "2"
-                },
-                {
-                    "source": "营养不良",
-                    "target": "及格",
-                    "value": "42"
-                },
-                {
-                    "source": "营养不良",
-                    "target": "良好",
-                    "value": "48"
-                },
-                {
-                    "source": "营养不良",
-                    "target": "优秀",
-                    "value": "4"
-                },
-                {
-                    "source": "肥胖",
-                    "target": "不及格",
-                    "value": "22"
-                },
-                {
-                    "source": "肥胖",
-                    "target": "及格",
-                    "value": "196"
-                },
-                {
-                    "source": "肥胖",
-                    "target": "良好",
-                    "value": "45"
-                },
-                {
-                    "source": "超重",
-                    "target": "不及格",
-                    "value": "3"
-                },
-                {
-                    "source": "超重",
-                    "target": "及格",
-                    "value": "108"
-                },
-                {
-                    "source": "超重",
-                    "target": "良好",
-                    "value": "100"
-                },
-                {
-                    "source": "超重",
-                    "target": "优秀",
-                    "value": "7"
-                },
-                {
-                    "source": "二年级",
-                    "target": "超重",
-                    "value": "30"
-                },
-                {
-                    "source": "二年级",
-                    "target": "肥胖",
-                    "value": "42"
-                },
-                {
-                    "source": "二年级",
-                    "target": "正常体重",
-                    "value": "140"
-                },
-                {
-                    "source": "二年级",
-                    "target": "营养不良",
-                    "value": "18"
-                },
-                {
-                    "source": "三年级",
-                    "target": "超重",
-                    "value": "41"
-                },
-                {
-                    "source": "三年级",
-                    "target": "肥胖",
-                    "value": "42"
-                },
-                {
-                    "source": "三年级",
-                    "target": "正常体重",
-                    "value": "133"
-                },
-                {
-                    "source": "三年级",
-                    "target": "营养不良",
-                    "value": "12"
-                },
-                {
-                    "source": "四年级",
-                    "target": "超重",
-                    "value": "33"
-                },
-                {
-                    "source": "四年级",
-                    "target": "肥胖",
-                    "value": "55"
-                },
-                {
-                    "source": "四年级",
-                    "target": "正常体重",
-                    "value": "152"
-                },
-                {
-                    "source": "四年级",
-                    "target": "营养不良",
-                    "value": "24"
-                },
-                {
-                    "source": "五年级",
-                    "target": "超重",
-                    "value": "43"
-                },
-                {
-                    "source": "五年级",
-                    "target": "肥胖",
-                    "value": "40"
-                },
-                {
-                    "source": "五年级",
-                    "target": "正常体重",
-                    "value": "147"
-                },
-                {
-                    "source": "五年级",
-                    "target": "营养不良",
-                    "value": "15"
-                },
-                {
-                    "source": "六年级",
-                    "target": "超重",
-                    "value": "32"
-                },
-                {
-                    "source": "六年级",
-                    "target": "肥胖",
-                    "value": "46"
-                },
-                {
-                    "source": "六年级",
-                    "target": "正常体重",
-                    "value": "122"
-                },
-                {
-                    "source": "六年级",
-                    "target": "营养不良",
-                    "value": "9"
-                }
-            ],
-            "itemStyle": {
-                "normal": {
-                    "borderWidth": 1,
-                    "borderColor": "#aaa"
-                }
-            },
-            "lineStyle": {
-                "normal": {
-                    "color": "source",
-                    "curveness": 0.5
-                }
+        "source": "一年级",
+        "target": "超重",
+        "value": "39"
+    },
+    {
+        "source": "一年级",
+        "target": "肥胖",
+        "value": "38"
+    },
+    {
+        "source": "一年级",
+        "target": "正常体重",
+        "value": "191"
+    },
+    {
+        "source": "一年级",
+        "target": "营养不良",
+        "value": "18"
+    },
+    {
+        "source": "正常体重",
+        "target": "不及格",
+        "value": "4"
+    },
+    {
+        "source": "正常体重",
+        "target": "及格",
+        "value": "220"
+    },
+    {
+        "source": "正常体重",
+        "target": "良好",
+        "value": "527"
+    },
+    {
+        "source": "正常体重",
+        "target": "优秀",
+        "value": "134"
+    },
+    {
+        "source": "营养不良",
+        "target": "不及格",
+        "value": "2"
+    },
+    {
+        "source": "营养不良",
+        "target": "及格",
+        "value": "42"
+    },
+    {
+        "source": "营养不良",
+        "target": "良好",
+        "value": "48"
+    },
+    {
+        "source": "营养不良",
+        "target": "优秀",
+        "value": "4"
+    },
+    {
+        "source": "肥胖",
+        "target": "不及格",
+        "value": "22"
+    },
+    {
+        "source": "肥胖",
+        "target": "及格",
+        "value": "196"
+    },
+    {
+        "source": "肥胖",
+        "target": "良好",
+        "value": "45"
+    },
+    {
+        "source": "超重",
+        "target": "不及格",
+        "value": "3"
+    },
+    {
+        "source": "超重",
+        "target": "及格",
+        "value": "108"
+    },
+    {
+        "source": "超重",
+        "target": "良好",
+        "value": "100"
+    },
+    {
+        "source": "超重",
+        "target": "优秀",
+        "value": "7"
+    },
+    {
+        "source": "二年级",
+        "target": "超重",
+        "value": "30"
+    },
+    {
+        "source": "二年级",
+        "target": "肥胖",
+        "value": "42"
+    },
+    {
+        "source": "二年级",
+        "target": "正常体重",
+        "value": "140"
+    },
+    {
+        "source": "二年级",
+        "target": "营养不良",
+        "value": "18"
+    },
+    {
+        "source": "三年级",
+        "target": "超重",
+        "value": "41"
+    },
+    {
+        "source": "三年级",
+        "target": "肥胖",
+        "value": "42"
+    },
+    {
+        "source": "三年级",
+        "target": "正常体重",
+        "value": "133"
+    },
+    {
+        "source": "三年级",
+        "target": "营养不良",
+        "value": "12"
+    },
+    {
+        "source": "四年级",
+        "target": "超重",
+        "value": "33"
+    },
+    {
+        "source": "四年级",
+        "target": "肥胖",
+        "value": "55"
+    },
+    {
+        "source": "四年级",
+        "target": "正常体重",
+        "value": "152"
+    },
+    {
+        "source": "四年级",
+        "target": "营养不良",
+        "value": "24"
+    },
+    {
+        "source": "五年级",
+        "target": "超重",
+        "value": "43"
+    },
+    {
+        "source": "五年级",
+        "target": "肥胖",
+        "value": "40"
+    },
+    {
+        "source": "五年级",
+        "target": "正常体重",
+        "value": "147"
+    },
+    {
+        "source": "五年级",
+        "target": "营养不良",
+        "value": "15"
+    },
+    {
+        "source": "六年级",
+        "target": "超重",
+        "value": "32"
+    },
+    {
+        "source": "六年级",
+        "target": "肥胖",
+        "value": "46"
+    },
+    {
+        "source": "六年级",
+        "target": "正常体重",
+        "value": "122"
+    },
+    {
+        "source": "六年级",
+        "target": "营养不良",
+        "value": "9"
+    }
+];
+
+var myChartSangJiTu = echarts.init(document.getElementById('myChartSangJiTu'));
+var option = {
+    "tooltip": {},
+    "series": [{
+        "type": "sankey",
+        "layout": "none",
+        "layoutIterations": 0,
+        "right": '5%',
+        "data": BmiNotes,
+        "links": BmiVal,
+        "itemStyle": {
+            "normal": {
+                "borderWidth": 1,
+                "borderColor": "#aaa"
             }
-        }],
-        "title": {
-            "show": true,
-            "text": ""
         },
-        "textStyle": {
-            "fontSize": 12
+        "lineStyle": {
+            "normal": {
+                "color": "source",
+                "curveness": 0.5
+            }
         }
-    };
+    }],
+    "title": {
+        "show": true,
+        "text": ""
+    },
+    "textStyle": {
+        "fontSize": 12
+    }
+};
 myChartSangJiTu.setOption(option);
 //BMI统计图 end
 //肺活量 start
 var myChartFeiHuoLang = echarts.init(document.getElementById('myChartFeiHuoLang'));
 var data = [
-    [[1,71.82,833,'一年级',"女"],[2,80.59,1259,'二年级','女'],[3,80.59,1459,'三年级',"女"],[4,81.58,1758,'四年级','女'],[5,80.44,1894,'五年级',"女"],[6,85.87,2287,'六年级','女']],
-    [[1,64.25,828,'一年级',"男"],[2,73.50,1231,'二年级','男'],[3,75.46,1537,'三年级',"男"],[4,75.47,1778,'四年级','男'],[5,73.90,2011,'五年级',"男"],[6,76.84,2384,'六年级','男']]];
+    [[1, 71.82, 833, '一年级', "女"], [2, 80.59, 1259, '二年级', '女'], [3, 80.59, 1459, '三年级', "女"], [4, 81.58, 1758, '四年级', '女'], [5, 80.44, 1894, '五年级', "女"], [6, 85.87, 2287, '六年级', '女']],
+    [[1, 64.25, 828, '一年级', "男"], [2, 73.50, 1231, '二年级', '男'], [3, 75.46, 1537, '三年级', "男"], [4, 75.47, 1778, '四年级', '男'], [5, 73.90, 2011, '五年级', "男"], [6, 76.84, 2384, '六年级', '男']]];
 var option = {
     // backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
     //     offset: 0,
@@ -632,13 +626,13 @@ var option = {
         right: 10,
         data: ['女', '男']
     },
-    xAxis: {
-        splitLine: {
-            lineStyle: {
-                type: 'dashed'
-            }
+    xAxis: [
+        {
+            type: 'category',
+            boundaryGap: false,
+            data: ['', '一年级', '二年级', '三年级', '四年级', '五年级', '六年级']
         }
-    },
+    ],
     yAxis: {
         splitLine: {
             lineStyle: {
@@ -652,7 +646,7 @@ var option = {
         data: data[0],
         type: 'scatter',
         symbolSize: function (data) {
-            return Math.sqrt(data[2])/1.5;
+            return Math.sqrt(data[2]) / 1.5;
         },
         label: {
             emphasis: {
@@ -682,7 +676,7 @@ var option = {
         data: data[1],
         type: 'scatter',
         symbolSize: function (data) {
-            return Math.sqrt(data[2])/1.5;
+            return Math.sqrt(data[2]) / 1.5;
         },
         label: {
             emphasis: {
@@ -715,14 +709,8 @@ myChartFeiHuoLang.setOption(option);
 //肺活量 end
 
 
-
-
-
-
-
-
 //爆发力 start
-var myChartBaoFaLi = echarts.init(document.getElementById('myChartBaoFaLi'),themeOption);
+var myChartBaoFaLi = echarts.init(document.getElementById('myChartBaoFaLi'), themeOption);
 option = {
     angleAxis: {
         type: 'category',
@@ -731,8 +719,8 @@ option = {
     },
     radiusAxis: {
         z: 10,
-        splitLine:{
-            show:false
+        splitLine: {
+            show: false
         }
     },
     polar: {},
@@ -798,7 +786,7 @@ var option = {
     yAxis: [
         {
             type: 'value',
-            name:'%'
+            name: '%'
         }
     ],
     series: [
@@ -825,11 +813,11 @@ var option = {
             type: 'bar',
             barWidth: 20,
             stack: '男',
-            label:{
-                normal:{
-                    show:true,
-                    position:'top',
-                    formatter:function(params){
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top',
+                    formatter: function (params) {
                         return '男';
                     }
                 }
@@ -859,11 +847,11 @@ var option = {
             type: 'bar',
             barWidth: 20,
             stack: '女',
-            label:{
-                normal:{
-                    show:true,
-                    position:'top',
-                    formatter:function(params){
+            label: {
+                normal: {
+                    show: true,
+                    position: 'top',
+                    formatter: function (params) {
                         return '女';
                     }
                 }
@@ -884,7 +872,7 @@ var option = {
         trigger: 'axis'
     },
     legend: {
-        data:['女生','男生']
+        data: ['女生', '男生']
     },
     toolbox: {
         show: true,
@@ -892,20 +880,20 @@ var option = {
         //     dataZoom: {
         //         yAxisIndex: 'none'
         //     },
-            // dataView: {readOnly: false},
-            // magicType: {type: ['line', 'bar']},
-            // restore: {},
-            // saveAsImage: {}
+        // dataView: {readOnly: false},
+        // magicType: {type: ['line', 'bar']},
+        // restore: {},
+        // saveAsImage: {}
         // }
     },
-    xAxis:  {
+    xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: ['一年级','二年级','三年级','四年级','五年级','六年级']
+        data: ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级']
     },
     yAxis: {
-        min:50,
-        max:100,
+        min: 50,
+        max: 100,
         type: 'value',
         axisLabel: {
             formatter: '{value}'
@@ -913,9 +901,9 @@ var option = {
     },
     series: [
         {
-            name:'女生',
-            type:'line',
-            data:[75.81,73.92,71.59,70.66,67.10,75.09],
+            name: '女生',
+            type: 'line',
+            data: [75.81, 73.92, 71.59, 70.66, 67.10, 75.09],
             markPoint: {
                 data: [
                     {type: 'max', name: '最大值'},
@@ -929,9 +917,9 @@ var option = {
             }
         },
         {
-            name:'男生',
-            type:'line',
-            data:[58.51,68.64,68.17,66.05,64.80,67.07],
+            name: '男生',
+            type: 'line',
+            data: [58.51, 68.64, 68.17, 66.05, 64.80, 67.07],
             markPoint: {
                 data: [
                     {type: 'max', name: '最大值'},
@@ -956,29 +944,29 @@ myChartRouRen.setOption(option);
 
 var myChartNaiLiNan = echarts.init(document.getElementById('myChartNaiLiNan'));
 var option = {
-    title:{
-        text:'男生',
-        top:'45%',
-        left:'40%'
+    title: {
+        text: '男生',
+        top: '45%',
+        left: '40%'
     },
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
     },
     legend: {
-        data:['不及格','及格','良好','优秀']
+        data: ['不及格', '及格', '良好', '优秀']
     },
     series: [
         {
-            name:'耐力百分比',
-            type:'pie',
+            name: '耐力百分比',
+            type: 'pie',
             radius: ['50%', '65%'],//['75%', '95%'],
             avoidLabelOverlap: false,
             label: {
                 normal: {
                     show: true,
                     position: 'outside',
-                    formatter:'{d}'
+                    formatter: '{d}'
                 },
                 emphasis: {
                     show: false,
@@ -992,14 +980,14 @@ var option = {
                 normal: {
                     show: true,
                     length: 5,
-                    length2:15
+                    length2: 15
                 }
             },
-            data:[
-                {value:10, name:'不及格'},
-                {value:61, name:'及格'},
-                {value:16, name:'良好'},
-                {value:13, name:'优秀'}
+            data: [
+                {value: 10, name: '不及格'},
+                {value: 61, name: '及格'},
+                {value: 16, name: '良好'},
+                {value: 13, name: '优秀'}
             ]
         }
     ]
@@ -1008,10 +996,10 @@ myChartNaiLiNan.setOption(option);
 
 var myChartNaiLiNu = echarts.init(document.getElementById('myChartNaiLiNu'));
 var option = {
-    title:{
-        text:'女生',
-        top:'45%',
-        left:'40%'
+    title: {
+        text: '女生',
+        top: '45%',
+        left: '40%'
     },
     tooltip: {
         trigger: 'item',
@@ -1020,19 +1008,19 @@ var option = {
     legend: {
         // orient: 'vertical',
         // x: 'left',
-        data:['不及格','及格','良好','优秀']
+        data: ['不及格', '及格', '良好', '优秀']
     },
     series: [
         {
-            name:'耐力百分比',
-            type:'pie',
+            name: '耐力百分比',
+            type: 'pie',
             radius: ['50%', '65%'],//['75%', '95%'],
             avoidLabelOverlap: false,
             label: {
                 normal: {
                     show: true,
                     position: 'outside',
-                    formatter:'{d}'
+                    formatter: '{d}'
                 },
                 emphasis: {
                     show: false,
@@ -1046,14 +1034,14 @@ var option = {
                 normal: {
                     show: true,
                     length: 6,
-                    length2:11
+                    length2: 11
                 }
             },
-            data:[
-                {value:1, name:'不及格'},
-                {value:60, name:'及格'},
-                {value:20, name:'良好'},
-                {value:19, name:'优秀'}
+            data: [
+                {value: 1, name: '不及格'},
+                {value: 60, name: '及格'},
+                {value: 20, name: '良好'},
+                {value: 19, name: '优秀'}
             ]
 
         }
@@ -1064,15 +1052,15 @@ myChartNaiLiNu.setOption(option);
 
 //柔韧 start
 var myChartSuDu = echarts.init(document.getElementById('myChartSuDu'));
-var  option = {
-    tooltip : {
+var option = {
+    tooltip: {
         trigger: 'axis',
-        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
-            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
+            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
         }
     },
     legend: {
-        data:['女生',  '男生']
+        data: ['女生', '男生']
     },
     grid: {
         left: '3%',
@@ -1080,45 +1068,44 @@ var  option = {
         bottom: '3%',
         containLabel: true
     },
-    xAxis : [
+    xAxis: [
         {
-            type : 'value'
+            type: 'value'
         }
     ],
-    yAxis : [
+    yAxis: [
         {
-            type : 'category',
-            axisTick : {show: false},
-            data : ['六年级','五年级','四年级','三年级','二年级','一年级']
+            type: 'category',
+            axisTick: {show: false},
+            data: ['六年级', '五年级', '四年级', '三年级', '二年级', '一年级']
         }
     ],
-    series : [
+    series: [
         {
-            name:'女生',
-            type:'bar',
+            name: '女生',
+            type: 'bar',
             label: {
                 normal: {
                     show: true,
                     position: 'inside'
                 }
             },
-            data:[90.62,86.97,87.68,88.52,90.92,90.71]
+            data: [90.62, 86.97, 87.68, 88.52, 90.92, 90.71]
         },
         {
-            name:'男生',
-            type:'bar',
+            name: '男生',
+            type: 'bar',
             stack: '总量',
             label: {
                 normal: {
                     show: true
                 }
             },
-            data:[86.30,84.53,88.40,87.05,91.11,89.33]
+            data: [86.30, 84.53, 88.40, 87.05, 91.11, 89.33]
         },
 
     ]
 };
-
 
 
 myChartSuDu.setOption(option);
@@ -1126,10 +1113,10 @@ myChartSuDu.setOption(option);
 
 //结论女 start
 var myChartJeLunNu = echarts.init(document.getElementById('myChartJeLunNu'));
-var hours = ['总分', '速度', '耐力', '柔韧', '爆发力', '力量','BMI','肺活量'];
-var days =  ['六年级', '五年级', '四年级', '三年级', '二年级', '一年级'];
+var hours = ['总分', '速度', '耐力', '柔韧', '爆发力', '力量', 'BMI', '肺活量'];
+var days = ['六年级', '五年级', '四年级', '三年级', '二年级', '一年级'];
 
-var data = [[0,0,6],[0,1,4],[0,2,4],[0,3,6],[0,4,6],[0,5,6],[0,6,6],[0,7,4],[1,0,4],[1,1,4],[1,2,4],[1,3,6],[1,4,6],[1,5,6],[1,6,6],[1,7,4],[2,0,6],[2,1,4],[2,2,0],[2,3,6],[2,4,6],[2,5,6],[2,6,6],[2,7,4],[3,0,6],[3,1,4],[3,2,0],[3,3,6],[3,4,6],[3,5,6],[3,6,6],[3,7,4],[4,0,6],[4,1,4],[4,2,0],[4,3,8],[4,4,6],[4,5,0],[4,6,6],[4,7,4],[5,0,4],[5,1,2],[5,2,0],[5,3,6],[5,4,4],[5,5,0],[5,6,6],[5,7,4]];
+var data = [[0, 0, 6], [0, 1, 4], [0, 2, 4], [0, 3, 6], [0, 4, 6], [0, 5, 6], [0, 6, 6], [0, 7, 4], [1, 0, 4], [1, 1, 4], [1, 2, 4], [1, 3, 6], [1, 4, 6], [1, 5, 6], [1, 6, 6], [1, 7, 4], [2, 0, 6], [2, 1, 4], [2, 2, 0], [2, 3, 6], [2, 4, 6], [2, 5, 6], [2, 6, 6], [2, 7, 4], [3, 0, 6], [3, 1, 4], [3, 2, 0], [3, 3, 6], [3, 4, 6], [3, 5, 6], [3, 6, 6], [3, 7, 4], [4, 0, 6], [4, 1, 4], [4, 2, 0], [4, 3, 8], [4, 4, 6], [4, 5, 0], [4, 6, 6], [4, 7, 4], [5, 0, 4], [5, 1, 2], [5, 2, 0], [5, 3, 6], [5, 4, 4], [5, 5, 0], [5, 6, 6], [5, 7, 4]];
 
 data = data.map(function (item) {
     return [item[1], item[0], item[2] || '-'];
@@ -1137,7 +1124,7 @@ data = data.map(function (item) {
 
 option = {
     tooltip: {
-        show:false,
+        show: false,
         position: 'top'
     },
 
@@ -1161,24 +1148,24 @@ option = {
         }
     },
     visualMap: {
-        type:'piecewise',
+        type: 'piecewise',
         pieces: [
-            {value:2,color:'#c23532'},
-            {value:4,color:'#304554'},
-            {value:6,color:'#60a0a8'},
-            {value:8,color:'#d58165'}
+            {value: 2, color: '#c23532'},
+            {value: 4, color: '#304554'},
+            {value: 6, color: '#60a0a8'},
+            {value: 8, color: '#d58165'}
         ],
         formatter: function (value, value2) {
-            if(value==2){
+            if (value == 2) {
                 return "不及格"
             }
-            else if(value==4){
+            else if (value == 4) {
                 return "及格"
             }
-            else if(value==6){
+            else if (value == 6) {
                 return "良好"
             }
-            else if(value==8){
+            else if (value == 8) {
                 return "优秀"
             }
         },
@@ -1194,17 +1181,17 @@ option = {
         label: {
             normal: {
                 show: true,
-                formatter:function(params){
-                    if(params.data[2]==2){
+                formatter: function (params) {
+                    if (params.data[2] == 2) {
                         return "不及格"
                     }
-                    else if(params.data[2]==4){
+                    else if (params.data[2] == 4) {
                         return "及格"
                     }
-                    else if(params.data[2]==6){
+                    else if (params.data[2] == 6) {
                         return "良好"
                     }
-                    else if(params.data[2]==8){
+                    else if (params.data[2] == 8) {
                         return "优秀"
                     }
                 }
@@ -1221,17 +1208,16 @@ option = {
 };
 
 
-
 myChartJeLunNu.setOption(option);
 //结论女 end
 
 
 //结论男 start
 var myChartJeLunNan = echarts.init(document.getElementById('myChartJeLunNan'));
-var hours = ['总分', '速度', '耐力', '柔韧', '爆发力', '力量','BMI','肺活量'];
-var days =  ['六年级', '五年级', '四年级', '三年级', '二年级', '一年级'];
+var hours = ['总分', '速度', '耐力', '柔韧', '爆发力', '力量', 'BMI', '肺活量'];
+var days = ['六年级', '五年级', '四年级', '三年级', '二年级', '一年级'];
 
-var data = [[0,0,6],[0,1,4],[0,2,4],[0,3,6],[0,4,6],[0,5,6],[0,6,6],[0,7,4],[1,0,4],[1,1,4],[1,2,4],[1,3,6],[1,4,6],[1,5,6],[1,6,6],[1,7,4],[2,0,6],[2,1,4],[2,2,0],[2,3,6],[2,4,6],[2,5,6],[2,6,6],[2,7,4],[3,0,6],[3,1,4],[3,2,0],[3,3,6],[3,4,6],[3,5,6],[3,6,6],[3,7,4],[4,0,6],[4,1,4],[4,2,0],[4,3,8],[4,4,6],[4,5,0],[4,6,6],[4,7,4],[5,0,4],[5,1,2],[5,2,0],[5,3,6],[5,4,4],[5,5,0],[5,6,6],[5,7,4]];
+var data = [[0, 0, 6], [0, 1, 4], [0, 2, 4], [0, 3, 6], [0, 4, 6], [0, 5, 6], [0, 6, 6], [0, 7, 4], [1, 0, 4], [1, 1, 4], [1, 2, 4], [1, 3, 6], [1, 4, 6], [1, 5, 6], [1, 6, 6], [1, 7, 4], [2, 0, 6], [2, 1, 4], [2, 2, 0], [2, 3, 6], [2, 4, 6], [2, 5, 6], [2, 6, 6], [2, 7, 4], [3, 0, 6], [3, 1, 4], [3, 2, 0], [3, 3, 6], [3, 4, 6], [3, 5, 6], [3, 6, 6], [3, 7, 4], [4, 0, 6], [4, 1, 4], [4, 2, 0], [4, 3, 8], [4, 4, 6], [4, 5, 0], [4, 6, 6], [4, 7, 4], [5, 0, 4], [5, 1, 2], [5, 2, 0], [5, 3, 6], [5, 4, 4], [5, 5, 0], [5, 6, 6], [5, 7, 4]];
 
 data = data.map(function (item) {
     return [item[1], item[0], item[2] || '-'];
@@ -1239,7 +1225,7 @@ data = data.map(function (item) {
 
 option = {
     tooltip: {
-        show:false,
+        show: false,
         position: 'top'
     },
 
@@ -1263,24 +1249,24 @@ option = {
         }
     },
     visualMap: {
-        type:'piecewise',
+        type: 'piecewise',
         pieces: [
-            {value:2,color:'#c23532'},
-            {value:4,color:'#304554'},
-            {value:6,color:'#60a0a8'},
-            {value:8,color:'#d58165'}
+            {value: 2, color: '#c23532'},
+            {value: 4, color: '#304554'},
+            {value: 6, color: '#60a0a8'},
+            {value: 8, color: '#d58165'}
         ],
         formatter: function (value, value2) {
-            if(value==2){
+            if (value == 2) {
                 return "不及格"
             }
-            else if(value==4){
+            else if (value == 4) {
                 return "及格"
             }
-            else if(value==6){
+            else if (value == 6) {
                 return "良好"
             }
-            else if(value==8){
+            else if (value == 8) {
                 return "优秀"
             }
         },
@@ -1296,17 +1282,17 @@ option = {
         label: {
             normal: {
                 show: true,
-                formatter:function(params){
-                    if(params.data[2]==2){
+                formatter: function (params) {
+                    if (params.data[2] == 2) {
                         return "不及格"
                     }
-                    else if(params.data[2]==4){
+                    else if (params.data[2] == 4) {
                         return "及格"
                     }
-                    else if(params.data[2]==6){
+                    else if (params.data[2] == 6) {
                         return "良好"
                     }
-                    else if(params.data[2]==8){
+                    else if (params.data[2] == 8) {
                         return "优秀"
                     }
                 }
