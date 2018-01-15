@@ -39,7 +39,7 @@ var pieOption = {
                                 color: '#666666',
                                 fontSize: 30,
                                 fontWeight: 'bold',
-                                lineHeight: 100,
+                                lineHeight: 80,
                                 width: 80,
                                 align: 'center'
                             },
