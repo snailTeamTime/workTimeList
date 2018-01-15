@@ -85,7 +85,7 @@ var option = {
     },
     radar: {
         // shape: 'circle',
-        radius: '40%',
+        radius: '55%',
         name: {
             textStyle: {
                 color: '#666',
@@ -168,7 +168,7 @@ var option = {
     },
     radar: {
         // shape: 'circle',
-        radius: '40%',
+        radius: '55%',
         name: {
             textStyle: {
                 color: '#666',
@@ -252,7 +252,7 @@ var option = {
     },
     radar: {
         // shape: 'circle',
-        radius: '40%',
+        radius: '55%',
         name: {
             textStyle: {
                 color: '#666',

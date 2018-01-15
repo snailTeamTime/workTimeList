@@ -1,6 +1,10 @@
 @page  {
     size: A4 portrait;
     margin: 0mm;
+    margin-top: 4mm;
+    margin-left: 150mm;
+    margin-right: 150mm;
+    margin-bottom: 0mm;
 }
 
 
@@ -33,7 +37,7 @@ html,body{height: 100%;width: 100%;}
 
 /*报告结果 start*/
 
-.allSection {width: 700px;margin: auto;padding-bottom: 30px;}
+.allSection {width: 1000px;margin: auto;padding-bottom: 30px;}
 .publicHead{  font-size: 20px;text-align: center;height: 50px;line-height: 50px;background-image: url("../images/top-bg.jpg");background-size: 100% 100%;background-repeat: no-repeat;color: #fff;margin-bottom: 10px;}
 
 
