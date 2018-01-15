@@ -120,7 +120,7 @@ var option = {
         // areaStyle: {normal: {}},
         data: [
             {
-                value: [89.73, 72.18, 68.94, 90.44, 78.03],
+                value : [89.73,72.18,68.94,90.44,78.03],
                 name: '校平均值',
                 label: {
                     normal: {
@@ -147,7 +147,7 @@ var option = {
             // areaStyle: {normal: {}},
             data: [
                 {
-                    value: [90.57, 74.31, 74.31, 82.82, 79.13],
+                    value : [91.04,70.17,67.74,86.19,74.02],
                     name: '区平均值'
                 }
 
@@ -204,7 +204,7 @@ var option = {
         // areaStyle: {normal: {}},
         data: [
             {
-                value: [87.64, 78.46, 69.19, 87.90, 85.19, 81.03],
+                value : [87.64,78.46,69.19,87.90,85.19,81.03],
                 name: '校平均值',
                 label: {
                     normal: {
@@ -231,7 +231,7 @@ var option = {
             // areaStyle: {normal: {}},
             data: [
                 {
-                    value: [90.57, 74.31, 74.31, 82.82, 79.13, 74.65],
+                    value : [88.98,77.95,67.47,83.82,80.08,73.41],
                     name: '区平均值'
                 }
 
@@ -288,7 +288,7 @@ var option = {
         // areaStyle: {normal: {}},
         data: [
             {
-                value: [88.06, 78.95, 68.11, 86.91, 86.10, 84.13, 75.46],
+                value : [88.06,78.95,68.11,86.91,86.10,84.13,75.46],
                 name: '校平均值',
                 label: {
                     normal: {
@@ -315,7 +315,7 @@ var option = {
             // areaStyle: {normal: {}},
             data: [
                 {
-                    value: [90.57, 74.31, 74.31, 82.82, 79.13, 74.65, 73.26],
+                    value : [88.98,78.98,67.94,82.97,79.94,77.07,72.28],
                     name: '区平均值'
                 }
 
@@ -743,58 +743,72 @@ myChartLiLang.setOption(option);
 var myChartRouRen = echarts.init(document.getElementById('myChartRouRen'));
 var option = {
     tooltip: {
-        trigger: 'axis',
-        axisPointer: {            // 坐标轴指示器，坐标轴触发有效
-            type: 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
-        }
+        trigger: 'axis'
     },
     legend: {
-        data: ['女生', '男生']
+        data:['女生','男生']
     },
-    grid: {
-        left: '3%',
-        right: '4%',
-        bottom: '3%',
-        containLabel: true
+    toolbox: {
+        show: true,
+        feature: {
+            dataZoom: {
+                yAxisIndex: 'none'
+            },
+            dataView: {readOnly: false},
+            magicType: {type: ['line', 'bar']},
+            restore: {},
+            saveAsImage: {}
+        }
     },
-    xAxis: [
-        {
-            type: 'value'
+    xAxis:  {
+        type: 'category',
+        boundaryGap: false,
+        data: ['一年级','二年级','三年级','四年级','五年级','六年级']
+    },
+    yAxis: {
+        min:50,
+        max:100,
+        type: 'value',
+        axisLabel: {
+            formatter: '{value}'
         }
-    ],
-    yAxis: [
-        {
-            type: 'category',
-            axisTick: {show: false},
-            data: ['六年级', '五年级', '四年级', '三年级', '二年级','一年级']
-        }
-    ],
+    },
     series: [
         {
-            name: '女生',
-            type: 'bar',
-            label: {
-                normal: {
-                    show: true,
-                    position: 'inside'
-                }
+            name:'女生',
+            type:'line',
+            data:[75.81,73.92,71.59,70.66,67.10,75.09],
+            markPoint: {
+                data: [
+                    {type: 'max', name: '最大值'},
+                    {type: 'min', name: '最小值'}
+                ]
             },
-            data: [75.09,67.10, 70.66, 71.59,73.92, 75.81]
+            markLine: {
+                data: [
+                    {type: 'average', name: '平均值'},
+                ]
+            }
         },
         {
-            name: '男生',
-            type: 'bar',
-            stack: '总量',
-            label: {
-                normal: {
-                    show: true
-                }
+            name:'男生',
+            type:'line',
+            data:[58.51,68.64,68.17,66.05,64.80,67.07],
+            markPoint: {
+                data: [
+                    {type: 'max', name: '最大值'},
+                    {type: 'min', name: '最小值'}
+                ]
             },
-            data: [67.07 , 64.80 , 68.17, 66.05,68.64,58.51]
+            markLine: {
+                data: [
+                    {type: 'average', name: '平均值'},
+                ]
+            }
         }
-
     ]
 };
+
 
 myChartRouRen.setOption(option);
 //速度 end
@@ -895,88 +909,62 @@ myChartNaiLiNan.setOption(option);
 
 //柔韧 start
 var myChartSuDu = echarts.init(document.getElementById('myChartSuDu'));
-var option = {
-    tooltip: {
-        trigger: 'axis'
+var  option = {
+    tooltip : {
+        trigger: 'axis',
+        axisPointer : {            // 坐标轴指示器，坐标轴触发有效
+            type : 'shadow'        // 默认为直线，可选为：'line' | 'shadow'
+        }
     },
     legend: {
-        data: ['女生', '男生']
+        data:['女生',  '男生']
     },
-    // toolbox: {
-    //     show: true,
-    //     feature: {
-    //         dataZoom: {
-    //             yAxisIndex: 'none'
-    //         },
-    //         dataView: {readOnly: false},
-    //         magicType: {type: ['line', 'bar']},
-    //         restore: {},
-    //         saveAsImage: {}
-    //     }
-    // },
-    xAxis: {
-        type: 'category',
-        boundaryGap: false,
-        data: ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级']
+    grid: {
+        left: '3%',
+        right: '4%',
+        bottom: '3%',
+        containLabel: true
     },
-    yAxis: {
-        min: 80,
-        max: 100,
-        type: 'value',
-        axisLabel: {
-            formatter: '{value}'
-        }
-    },
-    series: [
+    xAxis : [
         {
-            name: '女生',
-            type: 'line',
-            data: [91, 91, 89, 88, 87, 91],
-            markPoint: {
-                data: [
-                    {type: 'max', name: '最大值'},
-                    {type: 'min', name: '最小值'}
-                ]
+            type : 'value'
+        }
+    ],
+    yAxis : [
+        {
+            type : 'category',
+            axisTick : {show: false},
+            data : ['六年级','五年级','四年级','三年级','二年级','一年级']
+        }
+    ],
+    series : [
+        {
+            name:'女生',
+            type:'bar',
+            label: {
+                normal: {
+                    show: true,
+                    position: 'inside'
+                }
             },
-            markLine: {
-                data: [
-                    {type: 'average', name: '平均值'}
-                ]
-            }
+            data:[90.62,86.97,87.68,88.52,90.92,90.71]
         },
         {
-            name: '男生',
-            type: 'line',
-            data: [89, 91, 87, 88, 85, 86],
-            markPoint: {
-                data: [
-                    {type: 'max', name: '最大值'},
-                    {type: 'min', name: '最小值'}
-                ]
+            name:'男生',
+            type:'bar',
+            stack: '总量',
+            label: {
+                normal: {
+                    show: true
+                }
             },
-            markLine: {
-                data: [
-                    {type: 'average', name: '平均值'},
-                    [{
-                        symbol: 'none',
-                        x: '90%',
-                        yAxis: 'max'
-                    }, {
-                        symbol: 'circle',
-                        label: {
-                            normal: {
-                                position: 'start',
-                                formatter: '最大值'
-                            }
-                        },
-                        type: 'max',
-                        name: '最高点'
-                    }]
-                ]
-            }
-        }
+            data:[86.30,84.53,88.40,87.05,91.11,89.33]
+        },
+
     ]
 };
+
+
 
 myChartSuDu.setOption(option);
 //柔韧 end
@@ -984,9 +972,9 @@ myChartSuDu.setOption(option);
 //结论女 start
 var myChartJeLunNu = echarts.init(document.getElementById('myChartJeLunNu'));
 var hours = ['总分', '速度', '耐力', '柔韧', '爆发力', '力量','BMI','肺活量'];
-var days =  ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级'];
+var days =  ['六年级', '五年级', '四年级', '三年级', '二年级', '一年级'];
 
-var data = [[0,0,6],[0,1,4],[0,2,0],[0,3,8],[0,4,4],[0,5,0],[0,6,8],[0,7,4],[1,0,6],[1,1,4],[1,2,0],[1,3,8],[1,4,6],[1,5,0],[1,6,8],[1,7,6],[2,0,6],[2,1,4],[2,2,0],[2,3,6],[2,4,6],[2,5,4],[2,6,6],[2,7,6],[3,0,6],[3,1,4],[3,2,0],[3,3,6],[3,4,6],[3,5,6],[3,6,6],[3,7,6],[4,0,6],[4,1,4],[4,2,4],[4,3,6],[4,4,6],[4,5,6],[4,6,6],[4,7,6],[5,0,6],[5,1,4],[5,2,6],[5,3,8],[5,4,6],[5,5,6],[5,6,6],[5,7,6]];
+var data = [[0,0,6],[0,1,4],[0,2,4],[0,3,6],[0,4,6],[0,5,6],[0,6,6],[0,7,4],[1,0,4],[1,1,4],[1,2,4],[1,3,6],[1,4,6],[1,5,6],[1,6,6],[1,7,4],[2,0,6],[2,1,4],[2,2,0],[2,3,6],[2,4,6],[2,5,6],[2,6,6],[2,7,4],[3,0,6],[3,1,4],[3,2,0],[3,3,6],[3,4,6],[3,5,6],[3,6,6],[3,7,4],[4,0,6],[4,1,4],[4,2,0],[4,3,8],[4,4,6],[4,5,0],[4,6,6],[4,7,4],[5,0,4],[5,1,2],[5,2,0],[5,3,6],[5,4,4],[5,5,0],[5,6,6],[5,7,4]];
 
 data = data.map(function (item) {
     return [item[1], item[0], item[2] || '-'];
@@ -1027,17 +1015,16 @@ option = {
         ],
         formatter: function (value, value2) {
             if(value==2){
-                return "不及格" +
-                    "(60分以下)"
+                return "不及格"
             }
             else if(value==4){
-                return "及格(60-80分)"
+                return "及格"
             }
             else if(value==6){
-                return "良好(80-90分)"
+                return "良好"
             }
             else if(value==8){
-                return "优秀(90分以上)"
+                return "优秀"
             }
         },
         orient: 'horizontal',
@@ -1077,6 +1064,8 @@ option = {
         }
     }]
 };
+
+
 
 myChartJeLunNu.setOption(option);
 //结论女 end
@@ -1085,9 +1074,9 @@ myChartJeLunNu.setOption(option);
 //结论男 start
 var myChartJeLunNan = echarts.init(document.getElementById('myChartJeLunNan'));
 var hours = ['总分', '速度', '耐力', '柔韧', '爆发力', '力量','BMI','肺活量'];
-var days =  ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级'];
+var days =  ['六年级', '五年级', '四年级', '三年级', '二年级', '一年级'];
 
-var data = [[0,0,6],[0,1,4],[0,2,0],[0,3,8],[0,4,4],[0,5,0],[0,6,8],[0,7,4],[1,0,6],[1,1,4],[1,2,0],[1,3,8],[1,4,6],[1,5,0],[1,6,8],[1,7,6],[2,0,6],[2,1,4],[2,2,0],[2,3,6],[2,4,6],[2,5,4],[2,6,6],[2,7,6],[3,0,6],[3,1,4],[3,2,0],[3,3,6],[3,4,6],[3,5,6],[3,6,6],[3,7,6],[4,0,6],[4,1,4],[4,2,4],[4,3,6],[4,4,6],[4,5,6],[4,6,6],[4,7,6],[5,0,6],[5,1,4],[5,2,6],[5,3,8],[5,4,6],[5,5,6],[5,6,6],[5,7,6]];
+var data = [[0,0,6],[0,1,4],[0,2,4],[0,3,6],[0,4,6],[0,5,6],[0,6,6],[0,7,4],[1,0,4],[1,1,4],[1,2,4],[1,3,6],[1,4,6],[1,5,6],[1,6,6],[1,7,4],[2,0,6],[2,1,4],[2,2,0],[2,3,6],[2,4,6],[2,5,6],[2,6,6],[2,7,4],[3,0,6],[3,1,4],[3,2,0],[3,3,6],[3,4,6],[3,5,6],[3,6,6],[3,7,4],[4,0,6],[4,1,4],[4,2,0],[4,3,8],[4,4,6],[4,5,0],[4,6,6],[4,7,4],[5,0,4],[5,1,2],[5,2,0],[5,3,6],[5,4,4],[5,5,0],[5,6,6],[5,7,4]];
 
 data = data.map(function (item) {
     return [item[1], item[0], item[2] || '-'];
@@ -1128,16 +1117,16 @@ option = {
         ],
         formatter: function (value, value2) {
             if(value==2){
-                return "不及格(60分以下)"
+                return "不及格"
             }
             else if(value==4){
-                return "及格(60-80分)"
+                return "及格"
             }
             else if(value==6){
-                return "良好(80-90分)"
+                return "良好"
             }
             else if(value==8){
-                return "优秀(90分以上)"
+                return "优秀"
             }
         },
         orient: 'horizontal',
@@ -1177,6 +1166,7 @@ option = {
         }
     }]
 };
+
 
 myChartJeLunNan.setOption(option);
 //结论男 end
