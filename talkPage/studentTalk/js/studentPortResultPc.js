@@ -22,7 +22,8 @@ var pieOption = {
         data: [
             {
                 value: comprehensiveScore,
-                name: '{a|' + comprehensiveScore + '\n}{c|已超越' + comprehensiveScore + '%学校}',
+                // name: '{a|' + comprehensiveScore + '\n}{c|已超越' + comprehensiveScore + '%学校}',
+                name: '{a|' + comprehensiveScore + '\n}{c|第' + '2' + '名}',
                 itemStyle: {
                     normal: {
                         color: '#40D8C1'
@@ -42,7 +43,7 @@ var pieOption = {
                             },
                             c: {
                                 color: '#666666',
-                                fontSize: 12,
+                                fontSize: 14,
                                 borderRadius: 30,
                                 width: 120,
                                 align: 'center',
@@ -327,16 +328,16 @@ var myChartSangJiTu = echarts.init(document.getElementById('myChartSangJiTu'));
 var option =
     {
         "tooltip": {},
-        "toolbox": {
-            "show": true,
-            "itemSize": 25,
-            "right": 12,
-            "feature": {
-                "saveAsImage": {
-                    "show": true
-                }
-            }
-        },
+        // "toolbox": {
+        //     "show": true,
+        //     "itemSize": 25,
+        //     "right": 12,
+        //     "feature": {
+        //         "saveAsImage": {
+        //             "show": true
+        //         }
+        //     }
+        // },
         "series": [{
             "type": "sankey",
             "layout": "none",
@@ -899,18 +900,18 @@ var option = {
     legend: {
         data: ['女生', '男生']
     },
-    toolbox: {
-        show: true,
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            dataView: {readOnly: false},
-            magicType: {type: ['line', 'bar']},
-            restore: {},
-            saveAsImage: {}
-        }
-    },
+    // toolbox: {
+    //     show: true,
+    //     feature: {
+    //         dataZoom: {
+    //             yAxisIndex: 'none'
+    //         },
+    //         dataView: {readOnly: false},
+    //         magicType: {type: ['line', 'bar']},
+    //         restore: {},
+    //         saveAsImage: {}
+    //     }
+    // },
     xAxis: {
         type: 'category',
         boundaryGap: false,
