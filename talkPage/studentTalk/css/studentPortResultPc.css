@@ -13,7 +13,7 @@ html,body{height: 100%;width: 100%;}
 
 
 /*体质健康图标 start*/
-.chartRow7 .col-md-2{width: 14.28%;float: left;position: relative;min-height: 1px;padding-right: 15px;padding-left: 15px;}
+.chartRow7 .col-md-2{width: 14.28%;float: left;position: relative;min-height: 1px;padding-right: 0px;padding-left: 0px;}
 
 
 
@@ -41,7 +41,7 @@ html,body{height: 100%;width: 100%;}
 
 /*报告结果 start*/
 
-.allSection {max-width: 1000px;margin: auto;padding-bottom: 30px; }
+.allSection {max-width: 700px;margin: auto;padding-bottom: 30px; }
 .publicHead{  font-size: 20px;text-align: center;height: 50px;line-height: 50px;background-image: url("../images/top-bg.jpg");background-size: 100% 100%;background-repeat: no-repeat;color: #fff;margin-bottom: 25px;}
 
 
@@ -50,12 +50,6 @@ html,body{height: 100%;width: 100%;}
 .reportTitle {  clear: both;  color: #009cff;  font-size: 20px;  line-height: 30px; margin-bottom: 10px; }
 .reportTitle .icon1{display: inline-block;width: 6px;height:30px;background-color:#009cff;position: relative;top: 6px;margin-right: 10px; }
 
-
-
-@media screen and (max-width: 420px) {
-    .content{padding: 15px;}
-    .canvasBox1{width: 100%;height: 4rem;float: left;}
-}
 
 .verticalTable{ width: 100%;}
 .verticalTable table thead tr th{font-size: 16px; font-weight: 600;color: #444;padding: 10px;text-align: center;white-space: nowrap; border: 1px solid #dddddd; }
@@ -83,6 +77,10 @@ html,body{height: 100%;width: 100%;}
 
 .text-denger{color: #ff2a0c;}
 /*报告结果 end*/
+
+#reportCanvas1,
+#reportCanvas2,
+#reportCanvas3{height: 200px;}
 
 
 

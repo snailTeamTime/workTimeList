@@ -85,13 +85,13 @@ var option = {
     },
     radar: {
         // shape: 'circle',
-        radius: '60%',
+        radius: '40%',
         name: {
             textStyle: {
                 color: '#666',
                 backgroundColor: '#fff',
                 borderRadius: 3,
-                padding: [3, 5]
+                padding: [3, 0]
             }
         },
         indicator: [
@@ -168,13 +168,13 @@ var option = {
     },
     radar: {
         // shape: 'circle',
-        radius: '60%',
+        radius: '40%',
         name: {
             textStyle: {
                 color: '#666',
                 backgroundColor: '#fff',
                 borderRadius: 3,
-                padding: [3, 5]
+                padding: [3, 0]
             }
         },
         indicator: [
@@ -252,13 +252,13 @@ var option = {
     },
     radar: {
         // shape: 'circle',
-        radius: '60%',
+        radius: '40%',
         name: {
             textStyle: {
                 color: '#666',
                 backgroundColor: '#fff',
                 borderRadius: 3,
-                padding: [3, 5]
+                padding: [3, 0]
             }
         },
         indicator: [
@@ -816,7 +816,7 @@ var option = {
         {
             name:'访问来源',
             type:'pie',
-            radius: ['65%', '80%'],
+            radius: ['75%', '95%'],
             avoidLabelOverlap: false,
             label: {
                 normal: {
@@ -861,7 +861,7 @@ var option = {
         {
             name:'访问来源',
             type:'pie',
-            radius: ['65%', '80%'],
+            radius: ['75%', '95%'],
             avoidLabelOverlap: false,
             label: {
                 normal: {
