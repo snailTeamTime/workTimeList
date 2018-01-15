@@ -612,6 +612,114 @@ var option =
     };
 myChartSangJiTu.setOption(option);
 //BMI统计图 end
+//肺活量 start
+var myChartFeiHuoLang = echarts.init(document.getElementById('myChartFeiHuoLang'));
+var data = [
+    [[1,71.82,833,'一年级',"女"],[2,80.59,1259,'二年级','女'],[3,80.59,1459,'三年级',"女"],[4,81.58,1758,'四年级','女'],[5,80.44,1894,'五年级',"女"],[6,85.87,2287,'六年级','女']],
+    [[1,64.25,828,'一年级',"男"],[2,73.50,1231,'二年级','男'],[3,75.46,1537,'三年级',"男"],[4,75.47,1778,'四年级','男'],[5,73.90,2011,'五年级',"男"],[6,76.84,2384,'六年级','男']]];
+var option = {
+    // backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
+    //     offset: 0,
+    //     color: '#f7f8fa'
+    // }, {
+    //     offset: 1,
+    //     color: '#cdd0d5'
+    // }]),
+    // title: {
+    //     text: '肺活量'
+    // },
+    legend: {
+        right: 10,
+        data: ['女', '男']
+    },
+    xAxis: {
+        splitLine: {
+            lineStyle: {
+                type: 'dashed'
+            }
+        }
+    },
+    yAxis: {
+        splitLine: {
+            lineStyle: {
+                type: 'dashed'
+            }
+        },
+        scale: true
+    },
+    series: [{
+        name: '女',
+        data: data[0],
+        type: 'scatter',
+        symbolSize: function (data) {
+            return Math.sqrt(data[2])/1;
+        },
+        label: {
+            emphasis: {
+                show: true,
+                formatter: function (param) {
+                    return param.data[3];
+                },
+                position: 'top'
+            }
+        },
+        itemStyle: {
+            normal: {
+                shadowBlur: 10,
+                shadowColor: 'rgba(120, 36, 50, 0.5)',
+                shadowOffsetY: 5,
+                color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+                    offset: 0,
+                    color: 'rgb(251, 118, 123)'
+                }, {
+                    offset: 1,
+                    color: 'rgb(204, 46, 72)'
+                }])
+            }
+        }
+    }, {
+        name: '男',
+        data: data[1],
+        type: 'scatter',
+        symbolSize: function (data) {
+            return Math.sqrt(data[2])/1;
+        },
+        label: {
+            emphasis: {
+                show: true,
+                formatter: function (param) {
+                    return param.data[3];
+                },
+                position: 'top'
+            }
+        },
+        itemStyle: {
+            normal: {
+                shadowBlur: 10,
+                shadowColor: 'rgba(25, 100, 150, 0.5)',
+                shadowOffsetY: 5,
+                color: new echarts.graphic.RadialGradient(0.4, 0.3, 1, [{
+                    offset: 0,
+                    color: 'rgb(129, 227, 238)'
+                }, {
+                    offset: 1,
+                    color: 'rgb(25, 183, 207)'
+                }])
+            }
+        }
+    }]
+};
+
+
+myChartFeiHuoLang.setOption(option);
+//肺活量 end
+
+
+
+
+
+
+
 
 //爆发力 start
 var myChartBaoFaLi = echarts.init(document.getElementById('myChartBaoFaLi'),themeOption);
