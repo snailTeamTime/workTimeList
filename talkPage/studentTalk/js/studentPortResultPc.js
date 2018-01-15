@@ -845,58 +845,7 @@ myChartRouRen.setOption(option);
 
 
 //耐力 start
-var myChartNaiLiNu = echarts.init(document.getElementById('myChartNaiLiNu'));
-var option = {
-    title:{
-        text:'男生',
-        top:'45%',
-        left:'40%'
-    },
-    tooltip: {
-        trigger: 'item',
-        formatter: "{a} <br/>{b}: {c} ({d}%)"
-    },
-    legend: {
-        // orient: 'vertical',
-        // x: 'left',
-        data:['不及格','及格','良好','优秀']
-    },
-    series: [
-        {
-            name:'访问来源',
-            type:'pie',
-            radius: ['75%', '95%'],
-            avoidLabelOverlap: false,
-            label: {
-                normal: {
-                    show: false,
-                    position: 'center'
-                },
-                emphasis: {
-                    show: true,
-                    textStyle: {
-                        fontSize: '30',
-                        fontWeight: 'bold'
-                    }
-                }
-            },
 
-            labelLine: {
-                normal: {
-                    show: false
-                }
-            },
-            data:[
-                {value:1, name:'不及格'},
-                {value:60, name:'及格'},
-                {value:20, name:'良好'},
-                {value:19, name:'优秀'}
-            ]
-
-        }
-    ]
-};
-myChartNaiLiNu.setOption(option);
 var myChartNaiLiNan = echarts.init(document.getElementById('myChartNaiLiNan'));
 var option = {
     title:{
@@ -915,7 +864,7 @@ var option = {
         {
             name:'访问来源',
             type:'pie',
-            radius: ['55%', '75%'],//['75%', '95%'],
+            radius: ['50%', '65%'],//['75%', '95%'],
             avoidLabelOverlap: false,
             label: {
                 normal: {
@@ -948,6 +897,61 @@ var option = {
     ]
 };
 myChartNaiLiNan.setOption(option);
+
+var myChartNaiLiNu = echarts.init(document.getElementById('myChartNaiLiNu'));
+var option = {
+    title:{
+        text:'女生',
+        top:'45%',
+        left:'40%'
+    },
+    tooltip: {
+        trigger: 'item',
+        formatter: "{a} <br/>{b}: {c} ({d}%)"
+    },
+    legend: {
+        // orient: 'vertical',
+        // x: 'left',
+        data:['不及格','及格','良好','优秀']
+    },
+    series: [
+        {
+            name:'访问来源',
+            type:'pie',
+            radius: ['50%', '65%'],//['75%', '95%'],
+            avoidLabelOverlap: false,
+            label: {
+                normal: {
+                    show: true,
+                    position: 'outside',
+                    formatter:'{d}'
+                },
+                emphasis: {
+                    show: false,
+                    textStyle: {
+                        fontSize: '30',
+                        fontWeight: 'bold'
+                    }
+                }
+            },
+            labelLine: {
+                normal: {
+                    show: true,
+                    length: 6,
+                    length2:11
+                }
+            },
+            data:[
+                {value:1, name:'不及格'},
+                {value:60, name:'及格'},
+                {value:20, name:'良好'},
+                {value:19, name:'优秀'}
+            ]
+
+        }
+    ]
+};
+myChartNaiLiNu.setOption(option);
 //耐力 end
 
 //柔韧 start
