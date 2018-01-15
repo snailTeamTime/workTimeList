@@ -620,7 +620,12 @@ option = {
         data: ['一年级', '二年级', '三年级', '四年级', '五年级', '六年级'],
         z: 10
     },
-    radiusAxis: {},
+    radiusAxis: {
+        z: 10,
+        splitLine:{
+            show:false
+        }
+    },
     polar: {},
     series: [{
         type: 'bar',
@@ -841,6 +846,11 @@ myChartRouRen.setOption(option);
 //耐力 start
 var myChartNaiLiNu = echarts.init(document.getElementById('myChartNaiLiNu'));
 var option = {
+    title:{
+        text:'男生',
+        top:'45%',
+        left:'40%'
+    },
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
@@ -889,9 +899,9 @@ myChartNaiLiNu.setOption(option);
 var myChartNaiLiNan = echarts.init(document.getElementById('myChartNaiLiNan'));
 var option = {
     title:{
-        text:'男',
-        top:'50%',
-        left:'50%'
+        text:'男生',
+        top:'45%',
+        left:'40%'
     },
     tooltip: {
         trigger: 'item',
