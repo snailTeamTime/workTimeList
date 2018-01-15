@@ -888,6 +888,10 @@ myChartLiLang.setOption(option);
 
 
 //速度 start
+//修改区域 start
+var womanSpeedVal=[75.81, 73.92, 71.59, 70.66, 67.10, 75.09];//女生速度值
+var manSpeedVal=[58.51, 68.64, 68.17, 66.05, 64.80, 67.07];//男生速度值
+//修改区域 end
 var myChartRouRen = echarts.init(document.getElementById('myChartRouRen'));
 var option = {
     tooltip: {
@@ -925,7 +929,7 @@ var option = {
         {
             name: '女生',
             type: 'line',
-            data: [75.81, 73.92, 71.59, 70.66, 67.10, 75.09],
+            data: womanSpeedVal,
             markPoint: {
                 data: [
                     {type: 'max', name: '最大值'},
@@ -941,7 +945,7 @@ var option = {
         {
             name: '男生',
             type: 'line',
-            data: [58.51, 68.64, 68.17, 66.05, 64.80, 67.07],
+            data:manSpeedVal ,
             markPoint: {
                 data: [
                     {type: 'max', name: '最大值'},
@@ -963,6 +967,12 @@ myChartRouRen.setOption(option);
 
 
 //耐力 start
+//修改区域 start
+
+
+
+
+//修改区域 end
 
 var myChartNaiLiNan = echarts.init(document.getElementById('myChartNaiLiNan'));
 var option = {
