@@ -124,7 +124,9 @@ var option = {
                 name: '校平均值',
                 label: {
                     normal: {
-                        show: true
+                        show: true,
+                        color:'#34495e'
+
                     }
                 }
             }
@@ -208,7 +210,8 @@ var option = {
                 name: '校平均值',
                 label: {
                     normal: {
-                        show: true
+                        show: true,
+                        color:'#34495e'
                     }
                 }
             }
@@ -292,7 +295,8 @@ var option = {
                 name: '校平均值',
                 label: {
                     normal: {
-                        show: true
+                        show: true,
+                        color:'#34495e'
                     }
                 }
             }
@@ -344,6 +348,7 @@ var option =
             "type": "sankey",
             "layout": "none",
             "layoutIterations": 0,
+            "right":'5%',
             /*"data": [{
                 "name": "2016A等级"
             }, {
@@ -678,7 +683,8 @@ var option = {
     ],
     yAxis: [
         {
-            type: 'value'
+            type: 'value',
+            name:'%'
         }
     ],
     series: [
@@ -686,26 +692,35 @@ var option = {
             name: '不及格',
             type: 'bar',
             stack: '男',
-            data: [0, 0.01, 0, 0]
+            data: [0, 1, 0, 0]
         },
         {
             name: '及格',
             type: 'bar',
             stack: '男',
-            data: [0.49, 0.42, 0.42, 0.29]
+            data: [49, 42, 42, 29]
         },
         {
             name: '良好',
             type: 'bar',
             stack: '男',
-            data: [0.30, 0.32, 0.21, 0.30]
+            data: [30, 32, 21, 30]
         },
         {
             name: '优秀',
             type: 'bar',
             barWidth: 20,
             stack: '男',
-            data: [0.21, 0.25, 0.37, 0.41]
+            label:{
+                normal:{
+                    show:true,
+                    position:'top',
+                    formatter:function(params){
+                        return '男';
+                    }
+                }
+            },
+            data: [21, 25, 37, 41]
         },
         {
             name: '不及格',
@@ -717,20 +732,29 @@ var option = {
             name: '及格',
             type: 'bar',
             stack: '女',
-            data: [0.59, 0.38, 0.44, 0.33]
+            data: [59, 38, 44, 33]
         },
         {
             name: '良好',
             type: 'bar',
             stack: '女',
-            data: [0.24, 0.36, 0.21, 0.31]
+            data: [24, 36, 21, 31]
         },
         {
             name: '优秀',
             type: 'bar',
             barWidth: 20,
             stack: '女',
-            data: [0.17, 0.26, 0.35, 0.36]
+            label:{
+                normal:{
+                    show:true,
+                    position:'top',
+                    formatter:function(params){
+                        return '女';
+                    }
+                }
+            },
+            data: [17, 26, 35, 36]
         }
     ]
 };
@@ -750,15 +774,15 @@ var option = {
     },
     toolbox: {
         show: true,
-        feature: {
-            dataZoom: {
-                yAxisIndex: 'none'
-            },
-            dataView: {readOnly: false},
-            magicType: {type: ['line', 'bar']},
-            restore: {},
-            saveAsImage: {}
-        }
+        // feature: {
+        //     dataZoom: {
+        //         yAxisIndex: 'none'
+        //     },
+            // dataView: {readOnly: false},
+            // magicType: {type: ['line', 'bar']},
+            // restore: {},
+            // saveAsImage: {}
+        // }
     },
     xAxis:  {
         type: 'category',
@@ -864,6 +888,11 @@ var option = {
 myChartNaiLiNu.setOption(option);
 var myChartNaiLiNan = echarts.init(document.getElementById('myChartNaiLiNan'));
 var option = {
+    title:{
+        text:'男',
+        top:'50%',
+        left:'50%'
+    },
     tooltip: {
         trigger: 'item',
         formatter: "{a} <br/>{b}: {c} ({d}%)"
@@ -875,15 +904,16 @@ var option = {
         {
             name:'访问来源',
             type:'pie',
-            radius: ['75%', '95%'],
+            radius: ['55%', '75%'],//['75%', '95%'],
             avoidLabelOverlap: false,
             label: {
                 normal: {
-                    show: false,
-                    position: 'center'
+                    show: true,
+                    position: 'outside',
+                    formatter:'{d}'
                 },
                 emphasis: {
-                    show: true,
+                    show: false,
                     textStyle: {
                         fontSize: '30',
                         fontWeight: 'bold'
@@ -892,7 +922,9 @@ var option = {
             },
             labelLine: {
                 normal: {
-                    show: false
+                    show: true,
+                    length: 5,
+                    length2:10
                 }
             },
             data:[
