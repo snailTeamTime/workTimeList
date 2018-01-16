@@ -42,7 +42,7 @@
 //                         sessionStorage.setItem("student_count", item.student_count);
 //                         sessionStorage.setItem("teacher_count", item.teacher_count);
 //                         console.log("登陆成功");
-//                         window.location.href = "studentPortResultPc.html";
+//                         window.location.href = "studentPortResult.html";
 //                     }else {
 //                         $("#user_name").attr("data-content", "用户信息不正确请重新输入！");
 //                         $("#user_name").popover('show');
