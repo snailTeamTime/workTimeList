@@ -1,6 +1,6 @@
 // ================================================================
 //  author:
-//  createDate: 2016/09/05
+//  createDate: 2018/01/16
 //  description: 统计图表组件 路由定义
 //  ===============================================================
 define(function (require) {
@@ -10,7 +10,7 @@ define(function (require) {
             "": "baseDome",
             "baseDome":"baseDome",
             "baseDataTable":"baseDataTable",
-            "baseFormValidate":"baseFormValidate"
+            "basicInputInfo":"basicInputInfo"
         },
         goIndex: function (requirePath, operationType, currentId, jsonObject) {
             require([requirePath], function (view) {
@@ -32,9 +32,9 @@ define(function (require) {
         baseDataTable:function(){
             this.goIndex("pages/basePlugins/baseDataTable");
         },
-        //基础组件--表单验证
-        baseFormValidate:function(){
-            this.goIndex("pages/basePlugins/baseFormValidate");
+        //基本信息录入
+        basicInputInfo:function(){
+            this.goIndex("pages/basePlugins/basicInputInfo");
         }
 
     })
