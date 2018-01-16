@@ -1,6 +1,9 @@
 //全区分数总排名
+// 修改区域start
 var comprehensiveScore = 98;//超越学校百分数
 var comprehensiveScoreName = 5;//名次
+// 修改区域 end
+
 var myActivityChart = echarts.init(document.getElementById('evaluationScore'));
 var themeOption = 'macarons';
 var pieOption = {
@@ -76,8 +79,11 @@ myActivityChart.setOption(pieOption);
 //雷达图 start
 // 低年级雷达图 start
 
+// 修改区域 start
 var juniorGradeSchoolVal = [89.73, 72.18, 68.94, 90.44, 78.03];//校平均值
 var juniorGradAreaVal = [91.04, 70.17, 67.74, 86.19, 74.02];//区平均值
+// 修改区域 end
+
 var myChartRadarBox = echarts.init(document.getElementById('reportCanvas1'));
 var option = {
     title: {
@@ -166,8 +172,10 @@ myChartRadarBox.setOption(option);
 // 低年级雷达图 end
 
 //中年级雷达图 start
+// 修改区域start
 var centreGradeSchoolVal = [87.64, 78.46, 69.19, 87.90, 85.19, 81.03];//校平均值
 var centreGradAreaVal = [88.98, 77.95, 67.47, 83.82, 80.08, 73.41];//区平均值
+// 修改区域 end
 var myChartRadarBox2 = echarts.init(document.getElementById('reportCanvas2'));
 var option = {
     title: {
@@ -255,8 +263,11 @@ myChartRadarBox2.setOption(option);
 //中年级雷达图 end
 
 //高年级雷达图 start
+// 修改区域start
 var highGradeSchoolVal = [88.06, 78.95, 68.11, 86.91, 86.10, 84.13, 75.46];//校平均值
 var highGradAreaVal = [88.98, 78.98, 67.94, 82.97, 79.94, 77.07, 72.28];//区平均值
+// 修改区域 end
+
 var myChartRadarBox3 = echarts.init(document.getElementById('reportCanvas3'));
 var option = {
     title: {
@@ -345,6 +356,7 @@ myChartRadarBox3.setOption(option);
 //高年级雷达图 end
 
 //BMI统计图 start
+// 修改区域start
 var BmiNotes = [{
     "name": "一年级"
 }, {
@@ -572,6 +584,8 @@ var BmiVal = [
         "value": "9"
     }
 ];
+// 修改区域 end
+
 
 var myChartSangJiTu = echarts.init(document.getElementById('myChartSangJiTu'));
 var option = {
@@ -609,7 +623,7 @@ myChartSangJiTu.setOption(option);
 
 
 //肺活量 气泡图 start
-var myChartFeiHuoLang = echarts.init(document.getElementById('myChartFeiHuoLang'));
+
 //气泡图直接改data数据就可以了
 //修改区域 start
 var data = [
@@ -617,6 +631,8 @@ var data = [
     [[1, 64.25, 828, '一年级', "男"], [2, 73.50, 1231, '二年级', '男'], [3, 75.46, 1537, '三年级', "男"], [4, 75.47, 1778, '四年级', '男'], [5, 73.90, 2011, '五年级', "男"], [6, 76.84, 2384, '六年级', '男']]];
 //气泡图直接改data数据就可以了
 //修改区域 end
+
+var myChartFeiHuoLang = echarts.init(document.getElementById('myChartFeiHuoLang'));
 var option = {
     // backgroundColor: new echarts.graphic.RadialGradient(0.3, 0.3, 0.8, [{
     //     offset: 0,
@@ -782,6 +798,8 @@ var passPowerValWoman = [59, 38, 44, 33];//及格
 var goodPowerValWoman = [24, 36, 21, 31];//良好
 var veryGoodPowerValWoman = [17, 26, 35, 36];//优秀
 //修改区域 end
+
+
 var myChartLiLang = echarts.init(document.getElementById('myChartLiLang'));
 var option = {
     tooltip: {
@@ -887,11 +905,12 @@ myChartLiLang.setOption(option);
 //力量 end
 
 
-//速度 start
+//柔韧 start
 //修改区域 start
 var womanSpeedVal=[75.81, 73.92, 71.59, 70.66, 67.10, 75.09];//女生速度值
 var manSpeedVal=[58.51, 68.64, 68.17, 66.05, 64.80, 67.07];//男生速度值
 //修改区域 end
+
 var myChartRouRen = echarts.init(document.getElementById('myChartRouRen'));
 var option = {
     tooltip: {
@@ -960,23 +979,26 @@ var option = {
         }
     ]
 };
-
-
 myChartRouRen.setOption(option);
-//速度 end
+//柔韧 end
 
 
 //耐力 start
 //修改区域 start
+//男
 var enduranceManVal = [
     {value: 10, name: '不及格'},
     {value: 61, name: '及格'},
     {value: 16, name: '良好'},
     {value: 13, name: '优秀'}
 ];
-
-
-
+//女
+var enduranceWomanVal =[
+    {value: 1, name: '不及格'},
+    {value: 60, name: '及格'},
+    {value: 20, name: '良好'},
+    {value: 19, name: '优秀'}
+];
 //修改区域 end
 
 var myChartNaiLiNan = echarts.init(document.getElementById('myChartNaiLiNan'));
@@ -1069,12 +1091,7 @@ var option = {
                     length2: 11
                 }
             },
-            data: [
-                {value: 1, name: '不及格'},
-                {value: 60, name: '及格'},
-                {value: 20, name: '良好'},
-                {value: 19, name: '优秀'}
-            ]
+            data: enduranceWomanVal
 
         }
     ]
@@ -1082,7 +1099,16 @@ var option = {
 myChartNaiLiNu.setOption(option);
 //耐力 end
 
-//柔韧 start
+
+//速度 start
+// 修改区域 start
+//男生速度值
+var speedManVal=[86.30, 84.53, 88.40, 87.05, 91.11, 89.33];
+// 女生速度值
+var speedWomanVal=[90.62, 86.97, 87.68, 88.52, 90.92, 90.71];
+// 修改区域 end
+
+
 var myChartSuDu = echarts.init(document.getElementById('myChartSuDu'));
 var option = {
     tooltip: {
@@ -1122,7 +1148,7 @@ var option = {
                     position: 'inside'
                 }
             },
-            data: [90.62, 86.97, 87.68, 88.52, 90.92, 90.71]
+            data:speedWomanVal
         },
         {
             name: '男生',
@@ -1133,27 +1159,26 @@ var option = {
                     show: true
                 }
             },
-            data: [86.30, 84.53, 88.40, 87.05, 91.11, 89.33]
+            data:speedManVal
         },
 
     ]
 };
-
-
 myChartSuDu.setOption(option);
-//柔韧 end
+//速度 end
 
 //结论女 start
-var myChartJeLunNu = echarts.init(document.getElementById('myChartJeLunNu'));
+//修改区域 start
 var hours = ['总分', '速度', '耐力', '柔韧', '爆发力', '力量', 'BMI', '肺活量'];
 var days = ['六年级', '五年级', '四年级', '三年级', '二年级', '一年级'];
-
 var data = [[0, 0, 6], [0, 1, 4], [0, 2, 4], [0, 3, 6], [0, 4, 6], [0, 5, 6], [0, 6, 6], [0, 7, 4], [1, 0, 4], [1, 1, 4], [1, 2, 4], [1, 3, 6], [1, 4, 6], [1, 5, 6], [1, 6, 6], [1, 7, 4], [2, 0, 6], [2, 1, 4], [2, 2, 0], [2, 3, 6], [2, 4, 6], [2, 5, 6], [2, 6, 6], [2, 7, 4], [3, 0, 6], [3, 1, 4], [3, 2, 0], [3, 3, 6], [3, 4, 6], [3, 5, 6], [3, 6, 6], [3, 7, 4], [4, 0, 6], [4, 1, 4], [4, 2, 0], [4, 3, 8], [4, 4, 6], [4, 5, 0], [4, 6, 6], [4, 7, 4], [5, 0, 4], [5, 1, 2], [5, 2, 0], [5, 3, 6], [5, 4, 4], [5, 5, 0], [5, 6, 6], [5, 7, 4]];
+//修改区域 end
 
+
+var myChartJeLunNu = echarts.init(document.getElementById('myChartJeLunNu'));
 data = data.map(function (item) {
     return [item[1], item[0], item[2] || '-'];
 });
-
 option = {
     tooltip: {
         show: false,
@@ -1238,19 +1263,20 @@ option = {
         }
     }]
 };
-
-
 myChartJeLunNu.setOption(option);
 //结论女 end
 
 
 //结论男 start
-var myChartJeLunNan = echarts.init(document.getElementById('myChartJeLunNan'));
+//修改区域 start
 var hours = ['总分', '速度', '耐力', '柔韧', '爆发力', '力量', 'BMI', '肺活量'];
 var days = ['六年级', '五年级', '四年级', '三年级', '二年级', '一年级'];
-
 var data = [[0, 0, 6], [0, 1, 4], [0, 2, 4], [0, 3, 6], [0, 4, 6], [0, 5, 6], [0, 6, 6], [0, 7, 4], [1, 0, 4], [1, 1, 4], [1, 2, 4], [1, 3, 6], [1, 4, 6], [1, 5, 6], [1, 6, 6], [1, 7, 4], [2, 0, 6], [2, 1, 4], [2, 2, 0], [2, 3, 6], [2, 4, 6], [2, 5, 6], [2, 6, 6], [2, 7, 4], [3, 0, 6], [3, 1, 4], [3, 2, 0], [3, 3, 6], [3, 4, 6], [3, 5, 6], [3, 6, 6], [3, 7, 4], [4, 0, 6], [4, 1, 4], [4, 2, 0], [4, 3, 8], [4, 4, 6], [4, 5, 0], [4, 6, 6], [4, 7, 4], [5, 0, 4], [5, 1, 2], [5, 2, 0], [5, 3, 6], [5, 4, 4], [5, 5, 0], [5, 6, 6], [5, 7, 4]];
+//修改区域 end
 
+
+
+var myChartJeLunNan = echarts.init(document.getElementById('myChartJeLunNan'));
 data = data.map(function (item) {
     return [item[1], item[0], item[2] || '-'];
 });
