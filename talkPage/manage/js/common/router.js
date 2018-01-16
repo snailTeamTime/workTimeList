@@ -10,7 +10,10 @@ define(function (require) {
             "": "baseDome",
             "baseDome":"baseDome",
             "baseDataTable":"baseDataTable",
-            "basicInputInfo":"basicInputInfo"
+            //基本信息录入
+            "basicInputInfo":"basicInputInfo",
+            // 总体信息录入
+            "overallResults":"overallResults"
         },
         goIndex: function (requirePath, operationType, currentId, jsonObject) {
             require([requirePath], function (view) {
@@ -35,6 +38,10 @@ define(function (require) {
         //基本信息录入
         basicInputInfo:function(){
             this.goIndex("pages/basePlugins/basicInputInfo");
+        },
+        //基本信息录入
+        overallResults:function(){
+            this.goIndex("pages/basePlugins/overallResults");
         }
 
     })
