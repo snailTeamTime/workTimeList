@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/js/pages/basePlugins/baseModal.js" />
+    <file url="file://$PROJECT_DIR$/js/pages/basePlugins/baseRadio.js" />
+    <file url="file://$PROJECT_DIR$/js/pages/basePlugins/baseSelect.js" />
+    <file url="file://$PROJECT_DIR$/js/pages/basePlugins/baseSwitchingCanvas.js" />
+    <file url="file://$PROJECT_DIR$/js/pages/basePlugins/baseTabSwitching.js" />
+  </component>
+</project>
