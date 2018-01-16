@@ -31,7 +31,6 @@ define(function (require) {
             "click #btnSaveData": "saveFormData",
         },
         saveFormData:function(){
-            //$('input.icheck').iCheck('destroy');
         	var me=this;
         	//执行验证
             if (!$("#myForm1").valid()) {
@@ -111,6 +110,6 @@ define(function (require) {
                 }
             };
             return BasePluginsUTIL.ValidateForm(me, formId, opration);
-        },
+        }
     });
 });
