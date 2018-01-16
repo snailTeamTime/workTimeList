@@ -17,16 +17,14 @@
                     <div class="full-height-content-body">
                         <!-- BEGIN FORM-->
                         <form action="#" class="form-horizontal" id="myForm1">
-                            <div class="form-body">
+                            <div class="form-body text-center">
                                 <div class="row">
                                     <div class="col-md-7">
                                         <div class="form-group">
-                                            <label class="control-label col-md-4">标题</label>
+                                            <div class=" col-md-6"><h4 class="bold">标题名称</h4></div>
 
-                                            <div class="col-md-8">
-                                                <input dataKey="titleName" type="text" class="form-control "
-                                                       placeholder="如:2017年学生体质报告（必填项）" id="titleName" name="titleName">
-
+                                            <div class="col-md-6">
+                                                <h4 class="bold">对应标题值</h4>
                                             </div>
                                         </div>
                                     </div>
@@ -34,9 +32,23 @@
                                 <div class="row">
                                     <div class="col-md-7">
                                         <div class="form-group">
-                                            <label class="control-label col-md-4">地区</label>
-
+                                            <label class="control-label col-md-4">标题</label>
                                             <div class="col-md-8">
+                                                <input dataKey="titleName" type="text" class="form-control "
+                                                       placeholder="如:2017年学生体质报告（必填项）" id="titleName" name="titleName">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-7">
+                                        <div class="form-group">
+                                            <div class="col-md-6 ">
+                                                <input dataKey="regionName" type="text" class="form-control input-xsmall fr"
+                                                       placeholder="如:北京市海淀区（必填项）" id="regionNameKey" name="regionName">
+
+                                            </div>
+                                            <div class="col-md-6">
                                                 <input dataKey="regionName" type="text" class="form-control "
                                                        placeholder="如:北京市海淀区（必填项）" id="regionName" name="regionName">
 
@@ -114,6 +126,102 @@
 
                                 </div>
                             </div>
+                            <!--<div class="form-body">-->
+                                <!--<div class="row">-->
+                                    <!--<div class="col-md-7">-->
+                                        <!--<div class="form-group">-->
+                                            <!--<label class="control-label col-md-4">标题</label>-->
+
+                                            <!--<div class="col-md-8">-->
+                                                <!--<input dataKey="titleName" type="text" class="form-control "-->
+                                                       <!--placeholder="如:2017年学生体质报告（必填项）" id="titleName" name="titleName">-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="row">-->
+                                    <!--<div class="col-md-7">-->
+                                        <!--<div class="form-group">-->
+                                            <!--<label class="control-label col-md-4">地区</label>-->
+
+                                            <!--<div class="col-md-8">-->
+                                                <!--<input dataKey="regionName" type="text" class="form-control "-->
+                                                       <!--placeholder="如:北京市海淀区（必填项）" id="regionName" name="regionName">-->
+
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="row">-->
+                                    <!--<div class="col-md-7">-->
+                                        <!--<div class="form-group">-->
+                                            <!--<label class="control-label col-md-4">学校名称</label>-->
+
+                                            <!--<div class="col-md-8">-->
+                                                <!--<input dataKey="schoolName" type="text" class="form-control "-->
+                                                       <!--placeholder="如:东埠头小学" id="schoolName" name="schoolName">-->
+
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="row">-->
+                                    <!--<div class="col-md-7">-->
+                                        <!--<div class="form-group">-->
+                                            <!--<label class="control-label col-md-4">学生人数</label>-->
+
+                                            <!--<div class="col-md-8">-->
+                                                <!--<input dataKey="studentNum" type="text" class="form-control "-->
+                                                       <!--placeholder="如:300" id="studentNum" name="studentNum">-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="row">-->
+                                    <!--<div class="col-md-7">-->
+                                        <!--<div class="form-group">-->
+                                            <!--<label class="col-md-4 control-label">日期</label>-->
+
+                                            <!--<div class="col-md-8">-->
+                                                <!--<div class="input-group input-medium date date-picker"-->
+                                                     <!--data-date-format="yyyy-mm-dd">-->
+                                                    <!--<input dataKey="taleTime" id="taleTime" name="taleTime" type="text"-->
+                                                           <!--class="form-control" readonly>-->
+                                                    <!--<span class="input-group-btn">-->
+					                                <!--<button class="btn btn-success" type="button"><i-->
+                                                            <!--class="fa fa-calendar"></i></button>-->
+					                                <!--</span>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+                                <!--<div class="row">-->
+                                    <!--<div class="col-md-7">-->
+                                        <!--<div class="form-group">-->
+                                            <!--<label class="control-label col-md-4">背景介绍</label>-->
+                                            <!--<div class="col-md-8">-->
+                                                <!--<textarea class="form-control" dataKey="backgroundInfo" id="backgroundInfo" name="backgroundInfo" placeholder="如:根据市教委年度工作计划要求，结合门头沟区工作实际，于2017年10月16日—26日展开中小学生全员国家学生体质健康标准测试，建立区学生健康管理数据平台，从学生身体形态、身体机能、身体素质以及体质健康综合评价等方面对学生体质健康状况进行评估。全面评估各校学生健康情况，提高全区师生健康意识，提升学生体质健康水平。" cols="30" rows="10"></textarea>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+                                <!--</div>-->
+
+                                <!--<div class="row">-->
+                                    <!--<div class="col-md-7">-->
+                                        <!--<div class="form-group">-->
+                                            <!--<div class="row text-center">-->
+                                                <!--<div class="col-md-12">-->
+                                                    <!--<div class="col-md-offset-3 col-md-9">-->
+                                                        <!--<a class="btn btn-success" id="btnSaveData">保存</a>-->
+                                                    <!--</div>-->
+                                                <!--</div>-->
+                                            <!--</div>-->
+                                        <!--</div>-->
+                                    <!--</div>-->
+
+                                <!--</div>-->
+                            <!--</div>-->
                         </form>
                         <!-- END FORM-->
                     </div>
