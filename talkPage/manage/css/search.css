@@ -307,7 +307,7 @@ select{
     left: 0;
     width: 150px;
     height: 32px;
-    filter: alpha(opacity: 0;);
+    /*filter: alpha(opacity: 0;);*/
     font: 14px/20px "Microsoft YaHei";
     color:#808080;
 }
