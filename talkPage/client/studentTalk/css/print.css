@@ -10,7 +10,7 @@
 
 html,body{height: 100%;width: 100%;font-family: “Microsoft YaHei” ! important; }
 .text-indent{text-indent:2em;line-height: 2;}
-
+h4{font-size: 15px;}
 /*背景色 start*/
 /*灰色*/
 .bg-gray{background-color:#e9ecf3; }
