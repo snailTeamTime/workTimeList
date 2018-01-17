@@ -7,6 +7,11 @@ h4{font-size: 15px;}
 .bg-gray{background-color:#e9ecf3; }
 .bg-white{background-color: #fff;}
 
+.padding-left0{padding-left: 0px !important; }
+.padding-right0{padding-right: 0px !important; }
+
+.portlet.light.border-left0{border-left: 0px!important;}
+.portlet.light.border-right0{border-right: 0px!important;}
 
 /*背景色 end*/
 
