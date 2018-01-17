@@ -631,79 +631,79 @@
                 }));
             });
         }
-    }   
+    };
 
-    var googleMap = function() {
-        if ( $().gmap3 ) {
-            $("#map").gmap3({
-                map:{
-                    options:{
-                        zoom: 14,
-                        mapTypeId: 'pictor_style',
-                        mapTypeControlOptions: {
-                            mapTypeIds: ['pictor_style', google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID]
-                        },
-                        scrollwheel: false
-                    }
-                },
-                getlatlng:{
-                    address:  "21 King Street, Melbourne Victoria 3000 Australia",
-                    callback: function(results) {
-                        if ( !results ) return;
-                        $(this).gmap3('get').setCenter(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
-                        $(this).gmap3({
-                            marker:{
-                                latLng:results[0].geometry.location,
-                                options:{
-                                    icon: 'http://themesflat.com/html/pictor/images/map.png'
-                                }
-                            }
-                        });
-                    }
-                },
-                styledmaptype:{
-                    id: "pictor_style",
-                    options:{
-                        name: "Pictor Map"
-                    },
-                    styles: [
-                        {
-                            "featureType": "water",
-                            "stylers": [
-                                { "color": "#c6c6c6" }
-                            ]
-                        },
-                        
-                        {
-                            "featureType": "road.local",
-                            "stylers": [
-                              { "color": "#d3d3d3" }
-                            ]
-                        },
-                        {
-                            "featureType": "road.highway",
-                            "stylers": [
-                              { "color": "#e3e3e3" }
-                            ]
-                       },
-                       {
-                            "featureType": "road.highway",
-                            "stylers": [
-                              { "color": "#fff" }
-                            ]
-                       },
-                       {
-                            "featureType": "poi.park",
-                            "stylers": [
-                              { "color": "#e5e5e5" }
-                            ]
-                       }                                              
-                    ]
-                },  
-            });
-        }
-    };  
-
+    // var googleMap = function() {
+    //     if ( $().gmap3 ) {
+    //         $("#map").gmap3({
+    //             map:{
+    //                 options:{
+    //                     zoom: 14,
+    //                     mapTypeId: 'pictor_style',
+    //                     mapTypeControlOptions: {
+    //                         mapTypeIds: ['pictor_style', google.maps.MapTypeId.SATELLITE, google.maps.MapTypeId.HYBRID]
+    //                     },
+    //                     scrollwheel: false
+    //                 }
+    //             },
+    //             getlatlng:{
+    //                 address:  "21 King Street, Melbourne Victoria 3000 Australia",
+    //                 callback: function(results) {
+    //                     if ( !results ) return;
+    //                     $(this).gmap3('get').setCenter(new google.maps.LatLng(results[0].geometry.location.lat(), results[0].geometry.location.lng()));
+    //                     $(this).gmap3({
+    //                         marker:{
+    //                             latLng:results[0].geometry.location,
+    //                             options:{
+    //                                 icon: 'http://themesflat.com/html/pictor/images/map.png'
+    //                             }
+    //                         }
+    //                     });
+    //                 }
+    //             },
+    //             styledmaptype:{
+    //                 id: "pictor_style",
+    //                 options:{
+    //                     name: "Pictor Map"
+    //                 },
+    //                 styles: [
+    //                     {
+    //                         "featureType": "water",
+    //                         "stylers": [
+    //                             { "color": "#c6c6c6" }
+    //                         ]
+    //                     },
+    //
+    //                     {
+    //                         "featureType": "road.local",
+    //                         "stylers": [
+    //                           { "color": "#d3d3d3" }
+    //                         ]
+    //                     },
+    //                     {
+    //                         "featureType": "road.highway",
+    //                         "stylers": [
+    //                           { "color": "#e3e3e3" }
+    //                         ]
+    //                    },
+    //                    {
+    //                         "featureType": "road.highway",
+    //                         "stylers": [
+    //                           { "color": "#fff" }
+    //                         ]
+    //                    },
+    //                    {
+    //                         "featureType": "poi.park",
+    //                         "stylers": [
+    //                           { "color": "#e5e5e5" }
+    //                         ]
+    //                    }
+    //                 ]
+    //             },
+    //         });
+    //     }
+    // };
+    //
     var togglesAccordion = function() {
         var args = {duration: 600};
         $('.flat-toggle .toggle-title.active').siblings('.toggle-content').show();
@@ -711,7 +711,7 @@
         $('.flat-toggle.enable .toggle-title').on('click', function() {
             $(this).closest('.flat-toggle').find('.toggle-content').slideToggle(args);
             $(this).toggleClass('active');
-        }); // toggle 
+        }); // toggle
 
         $('.flat-accordion .toggle-title').on('click', function () {
             if( !$(this).is('.active') ) {
@@ -721,7 +721,7 @@
             } else {
                 $(this).toggleClass('active');
                 $(this).next().slideToggle(args);
-            }     
+            }
         }); // accordion
     };
 
@@ -811,7 +811,7 @@
         progressBar();
         flatClient();
         flatClientSt1();
-        togglesAccordion();    
+        togglesAccordion();
         tabs(); 
         featuredPost();
         flatServices();
@@ -822,7 +822,7 @@
         woocommerceTabs();
         detectViewport(); 
         sectionVideo();
-        googleMap();        
+        // googleMap();    谷歌地图
         flatAnimation();       
         goTop();        
         responsiveVideo();
